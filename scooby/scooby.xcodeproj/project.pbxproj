@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		89702D071CBBC7A700A8256F /* MultipeerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89702D061CBBC7A700A8256F /* MultipeerController.swift */; };
+		89702D091CBBC82900A8256F /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89702D081CBBC82900A8256F /* MultipeerConnectivity.framework */; };
+		897E6F461CBBB2B9008741B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E6F451CBBB2B9008741B8 /* AppDelegate.swift */; };
+		897E6F481CBBB2B9008741B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E6F471CBBB2B9008741B8 /* ViewController.swift */; };
+		897E6F4E1CBBB2BA008741B8 /* scooby.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 897E6F4C1CBBB2BA008741B8 /* scooby.xcdatamodeld */; };
+		897E6F501CBBB2BA008741B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 897E6F4F1CBBB2BA008741B8 /* Assets.xcassets */; };
+		897E6F611CBBB87F008741B8 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E6F601CBBB87F008741B8 /* Reachability.swift */; };
+		897E6F631CBBB902008741B8 /* ErrorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E6F621CBBB902008741B8 /* ErrorController.swift */; };
+		897E6F651CBBB92C008741B8 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E6F641CBBB92C008741B8 /* NavigationController.swift */; };
+		897E6F681CBBB95E008741B8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E6F671CBBB95E008741B8 /* Colors.swift */; };
+		897E6F6A1CBBB9E8008741B8 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E6F691CBBB9E8008741B8 /* Fonts.swift */; };
+		897E6F6C1CBBBA3C008741B8 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E6F6B1CBBBA3C008741B8 /* Device.swift */; };
+		897E6F791CBBBAAA008741B8 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 897E6F6F1CBBBAAA008741B8 /* OpenSans-Bold.ttf */; };
+		897E6F7A1CBBBAAA008741B8 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 897E6F701CBBBAAA008741B8 /* OpenSans-BoldItalic.ttf */; };
+		897E6F7B1CBBBAAA008741B8 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 897E6F711CBBBAAA008741B8 /* OpenSans-ExtraBold.ttf */; };
+		897E6F7C1CBBBAAA008741B8 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 897E6F721CBBBAAA008741B8 /* OpenSans-ExtraBoldItalic.ttf */; };
+		897E6F7D1CBBBAAA008741B8 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 897E6F731CBBBAAA008741B8 /* OpenSans-Italic.ttf */; };
+		897E6F7E1CBBBAAA008741B8 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 897E6F741CBBBAAA008741B8 /* OpenSans-Light.ttf */; };
+		897E6F7F1CBBBAAA008741B8 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 897E6F751CBBBAAA008741B8 /* OpenSans-LightItalic.ttf */; };
+		897E6F801CBBBAAA008741B8 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 897E6F761CBBBAAA008741B8 /* OpenSans-Regular.ttf */; };
+		897E6F811CBBBAAA008741B8 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 897E6F771CBBBAAA008741B8 /* OpenSans-Semibold.ttf */; };
+		897E6F821CBBBAAA008741B8 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 897E6F781CBBBAAA008741B8 /* OpenSans-SemiboldItalic.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		89702D061CBBC7A700A8256F /* MultipeerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MultipeerController.swift; path = Controllers/MultipeerController.swift; sourceTree = "<group>"; };
+		89702D081CBBC82900A8256F /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+		897E6F421CBBB2B9008741B8 /* scooby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scooby.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		897E6F451CBBB2B9008741B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		897E6F471CBBB2B9008741B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		897E6F4D1CBBB2BA008741B8 /* scooby.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = scooby.xcdatamodel; sourceTree = "<group>"; };
+		897E6F4F1CBBB2BA008741B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		897E6F541CBBB2BA008741B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		897E6F601CBBB87F008741B8 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = Helpers/Reachability.swift; sourceTree = "<group>"; };
+		897E6F621CBBB902008741B8 /* ErrorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorController.swift; path = Controllers/ErrorController.swift; sourceTree = "<group>"; };
+		897E6F641CBBB92C008741B8 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationController.swift; path = Controllers/NavigationController.swift; sourceTree = "<group>"; };
+		897E6F671CBBB95E008741B8 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = Helpers/Constants/Colors.swift; sourceTree = "<group>"; };
+		897E6F691CBBB9E8008741B8 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fonts.swift; path = Helpers/Constants/Fonts.swift; sourceTree = "<group>"; };
+		897E6F6B1CBBBA3C008741B8 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Helpers/Constants/Device.swift; sourceTree = "<group>"; };
+		897E6F6F1CBBBAAA008741B8 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		897E6F701CBBBAAA008741B8 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		897E6F711CBBBAAA008741B8 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		897E6F721CBBBAAA008741B8 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		897E6F731CBBBAAA008741B8 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		897E6F741CBBBAAA008741B8 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		897E6F751CBBBAAA008741B8 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		897E6F761CBBBAAA008741B8 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		897E6F771CBBBAAA008741B8 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		897E6F781CBBBAAA008741B8 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		897E6F3F1CBBB2B9008741B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89702D091CBBC82900A8256F /* MultipeerConnectivity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		897E6F391CBBB2B9008741B8 = {
+			isa = PBXGroup;
+			children = (
+				89702D081CBBC82900A8256F /* MultipeerConnectivity.framework */,
+				897E6F441CBBB2B9008741B8 /* scooby */,
+				897E6F431CBBB2B9008741B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		897E6F431CBBB2B9008741B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				897E6F421CBBB2B9008741B8 /* scooby.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		897E6F441CBBB2B9008741B8 /* scooby */ = {
+			isa = PBXGroup;
+			children = (
+				897E6F6D1CBBBA8A008741B8 /* Resources */,
+				897E6F5A1CBBB76E008741B8 /* Helpers */,
+				897E6F5B1CBBB783008741B8 /* Controllers */,
+				897E6F5C1CBBB795008741B8 /* Models */,
+				897E6F5D1CBBB79E008741B8 /* Views */,
+				897E6F451CBBB2B9008741B8 /* AppDelegate.swift */,
+				897E6F471CBBB2B9008741B8 /* ViewController.swift */,
+				897E6F541CBBB2BA008741B8 /* Info.plist */,
+				897E6F4C1CBBB2BA008741B8 /* scooby.xcdatamodeld */,
+			);
+			path = scooby;
+			sourceTree = "<group>";
+		};
+		897E6F5A1CBBB76E008741B8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				897E6F661CBBB93E008741B8 /* Constants */,
+				897E6F601CBBB87F008741B8 /* Reachability.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		897E6F5B1CBBB783008741B8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				897E6F621CBBB902008741B8 /* ErrorController.swift */,
+				897E6F641CBBB92C008741B8 /* NavigationController.swift */,
+				89702D061CBBC7A700A8256F /* MultipeerController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		897E6F5C1CBBB795008741B8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		897E6F5D1CBBB79E008741B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		897E6F661CBBB93E008741B8 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				897E6F671CBBB95E008741B8 /* Colors.swift */,
+				897E6F691CBBB9E8008741B8 /* Fonts.swift */,
+				897E6F6B1CBBBA3C008741B8 /* Device.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		897E6F6D1CBBBA8A008741B8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				897E6F4F1CBBB2BA008741B8 /* Assets.xcassets */,
+				897E6F6E1CBBBA92008741B8 /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		897E6F6E1CBBBA92008741B8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				897E6F6F1CBBBAAA008741B8 /* OpenSans-Bold.ttf */,
+				897E6F701CBBBAAA008741B8 /* OpenSans-BoldItalic.ttf */,
+				897E6F711CBBBAAA008741B8 /* OpenSans-ExtraBold.ttf */,
+				897E6F721CBBBAAA008741B8 /* OpenSans-ExtraBoldItalic.ttf */,
+				897E6F731CBBBAAA008741B8 /* OpenSans-Italic.ttf */,
+				897E6F741CBBBAAA008741B8 /* OpenSans-Light.ttf */,
+				897E6F751CBBBAAA008741B8 /* OpenSans-LightItalic.ttf */,
+				897E6F761CBBBAAA008741B8 /* OpenSans-Regular.ttf */,
+				897E6F771CBBBAAA008741B8 /* OpenSans-Semibold.ttf */,
+				897E6F781CBBBAAA008741B8 /* OpenSans-SemiboldItalic.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		897E6F411CBBB2B9008741B8 /* scooby */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 897E6F571CBBB2BA008741B8 /* Build configuration list for PBXNativeTarget "scooby" */;
+			buildPhases = (
+				897E6F3E1CBBB2B9008741B8 /* Sources */,
+				897E6F3F1CBBB2B9008741B8 /* Frameworks */,
+				897E6F401CBBB2B9008741B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = scooby;
+			productName = scooby;
+			productReference = 897E6F421CBBB2B9008741B8 /* scooby.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		897E6F3A1CBBB2B9008741B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Lloyd Keijzer";
+				TargetAttributes = {
+					897E6F411CBBB2B9008741B8 = {
+						CreatedOnToolsVersion = 7.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 897E6F3D1CBBB2B9008741B8 /* Build configuration list for PBXProject "scooby" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 897E6F391CBBB2B9008741B8;
+			productRefGroup = 897E6F431CBBB2B9008741B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				897E6F411CBBB2B9008741B8 /* scooby */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		897E6F401CBBB2B9008741B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				897E6F7A1CBBBAAA008741B8 /* OpenSans-BoldItalic.ttf in Resources */,
+				897E6F791CBBBAAA008741B8 /* OpenSans-Bold.ttf in Resources */,
+				897E6F7E1CBBBAAA008741B8 /* OpenSans-Light.ttf in Resources */,
+				897E6F7C1CBBBAAA008741B8 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				897E6F811CBBBAAA008741B8 /* OpenSans-Semibold.ttf in Resources */,
+				897E6F7D1CBBBAAA008741B8 /* OpenSans-Italic.ttf in Resources */,
+				897E6F501CBBB2BA008741B8 /* Assets.xcassets in Resources */,
+				897E6F7F1CBBBAAA008741B8 /* OpenSans-LightItalic.ttf in Resources */,
+				897E6F801CBBBAAA008741B8 /* OpenSans-Regular.ttf in Resources */,
+				897E6F7B1CBBBAAA008741B8 /* OpenSans-ExtraBold.ttf in Resources */,
+				897E6F821CBBBAAA008741B8 /* OpenSans-SemiboldItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		897E6F3E1CBBB2B9008741B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				897E6F6A1CBBB9E8008741B8 /* Fonts.swift in Sources */,
+				897E6F631CBBB902008741B8 /* ErrorController.swift in Sources */,
+				897E6F651CBBB92C008741B8 /* NavigationController.swift in Sources */,
+				897E6F6C1CBBBA3C008741B8 /* Device.swift in Sources */,
+				897E6F481CBBB2B9008741B8 /* ViewController.swift in Sources */,
+				89702D071CBBC7A700A8256F /* MultipeerController.swift in Sources */,
+				897E6F681CBBB95E008741B8 /* Colors.swift in Sources */,
+				897E6F4E1CBBB2BA008741B8 /* scooby.xcdatamodeld in Sources */,
+				897E6F611CBBB87F008741B8 /* Reachability.swift in Sources */,
+				897E6F461CBBB2B9008741B8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		897E6F551CBBB2BA008741B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		897E6F561CBBB2BA008741B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		897E6F581CBBB2BA008741B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = scooby/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.lloydkeijzer.scooby;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		897E6F591CBBB2BA008741B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = scooby/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.lloydkeijzer.scooby;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		897E6F3D1CBBB2B9008741B8 /* Build configuration list for PBXProject "scooby" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				897E6F551CBBB2BA008741B8 /* Debug */,
+				897E6F561CBBB2BA008741B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		897E6F571CBBB2BA008741B8 /* Build configuration list for PBXNativeTarget "scooby" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				897E6F581CBBB2BA008741B8 /* Debug */,
+				897E6F591CBBB2BA008741B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		897E6F4C1CBBB2BA008741B8 /* scooby.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				897E6F4D1CBBB2BA008741B8 /* scooby.xcdatamodel */,
+			);
+			currentVersion = 897E6F4D1CBBB2BA008741B8 /* scooby.xcdatamodel */;
+			path = scooby.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 897E6F3A1CBBB2B9008741B8 /* Project object */;
+}
