@@ -9,6 +9,12 @@
 import Foundation
 import MultipeerConnectivity
 
+@objc protocol MultipeerDelegate {
+    optional func peerDidConnect(peerID: MCPeerID)
+    optional func peerIsConnecting(peerID: MCPeerID)
+    optional func lostConnectionToPeer(peerID: MCPeerID, index: Int)
+}
+
 class MultipeerController : NSObject, MCSessionDelegate, MCNearbyServiceBrowserDelegate, MCNearbyServiceAdvertiserDelegate {
     
     static var displayName : String?
@@ -18,6 +24,9 @@ class MultipeerController : NSObject, MCSessionDelegate, MCNearbyServiceBrowserD
     var session : MCSession!
     var advertiser : MCNearbyServiceAdvertiser!
     var browser : MCNearbyServiceBrowser!
+    var peers = [MCPeerID]()
+    
+    var delegate : MultipeerDelegate?
     
     let SERVICE_STRING = "scooby-service"
     
@@ -54,20 +63,32 @@ class MultipeerController : NSObject, MCSessionDelegate, MCNearbyServiceBrowserD
         switch(state) {
             case .Connected:
                 print("Connected to: \(peerID.displayName)")
+                peers.append(peerID)
+                if delegate != nil {
+                    delegate!.peerDidConnect?(peerID)
+                }
                 break
             case .Connecting:
                 print("Connecting to: \(peerID.displayName)")
+                if delegate != nil {
+                    delegate!.peerIsConnecting?(peerID)
+                }
                 break
             case .NotConnected:
                 print("Connection lost with: \(peerID.displayName)")
+                if let index = peers.indexOf(peerID) {
+                    peers.removeAtIndex(index)
+                    if delegate != nil {
+                        delegate!.lostConnectionToPeer?(peerID, index: index)
+                    }
+                }
                 break
         }
     }
     
     // Received data from remote peer.
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
-    
-        print("Received data from: \(peerID.displayName) data: \(String(data))")
+        Datacalls.processData(data, sender: peerID)
     }
     
     // Received a byte stream from remote peer.
@@ -93,7 +114,7 @@ class MultipeerController : NSObject, MCSessionDelegate, MCNearbyServiceBrowserD
     // Found a nearby advertising peer.
     func browser(browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
         print("Found peer: \(peerID.displayName)")
-        browser.invitePeer(peerID, toSession: session, withContext: nil, timeout: 60)
+        browser.invitePeer(peerID, toSession: session, withContext: NSData(), timeout: 60)
     }
     
     // A nearby peer has stopped advertising.
@@ -106,5 +127,6 @@ class MultipeerController : NSObject, MCSessionDelegate, MCNearbyServiceBrowserD
     func advertiser(advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: NSData?, invitationHandler: (Bool, MCSession) -> Void) {
         
         print("Received invite from: \(peerID.displayName)")
+        invitationHandler(true, self.session)
     }
 }

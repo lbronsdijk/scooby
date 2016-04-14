@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import MultipeerConnectivity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,22 +23,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         // start monitoring internet connection
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("networkStatusChanged:"), name: ReachabilityStatusChangedNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(networkStatusChanged(_:)), name: ReachabilityStatusChangedNotification, object: nil)
         Reach().monitorReachabilityChanges()
+        
+        // start multipeer connectivity
+        MultipeerController.displayName = "Luc"
+        MultipeerController.sharedInstance
         
         // create the application its window
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         // create rootviewcontroller with navigation
-        //let dashboardViewController = DashboardViewController()
-        let navigationController = NavigationController(rootViewController: ViewController())
+        let dashboardViewController = DashboardViewController()
+        let navigationController = NavigationController(rootViewController: dashboardViewController)
         
         // set and show rootviewcontroller
         self.window!.rootViewController = navigationController
         self.window!.makeKeyAndVisible()
-        
-        MultipeerController.displayName = "Luc"
-        MultipeerController.sharedInstance
         
         return true
     }
@@ -58,36 +60,53 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         backgroundTask = application.beginBackgroundTaskWithExpirationHandler { () -> Void in
             
             // If your background task takes too long, this block of code will execute
-            self.cleanUp()
-            
+            application.endBackgroundTask(self.backgroundTask)
             self.backgroundTask = UIBackgroundTaskInvalid
         }
-        
-        // Do the work you need to do
-        dispatch_async(dispatch_get_main_queue()) { () -> Void in
-            
-            //Finish up the transfer of data between peers
-            self.cleanUp()
-            
-            // End the background task so that iOS doesn't kill the app
-            application.endBackgroundTask(self.backgroundTask)
-        }
-    }
-    
-    // clean up
-    func cleanUp() {
-        
-        // Clean up the Multipeer session
     }
     
     // foreground
-    func applicationWillEnterForeground(application: UIApplication) {
-        application.endBackgroundTask(self.backgroundTask)
+    func applicationDidBecomeActive(application: UIApplication) {
+        self.backgroundTask = UIBackgroundTaskInvalid
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        
+        print("Calling Application Bundle ID: \(sourceApplication)")
+        print("URL scheme: \(url.scheme)")
+        print("URL query: \(url.queryDictionary)")
+        
+        joinGroupDataCall(
+            url.queryDictionary!["groupId"]![0],
+            creator: url.queryDictionary!["creator"]![0]
+        )
+        
+        return true
+    }
+    
+    func joinGroupDataCall(groupId: String, creator: String) {
+        
+        let mulitpeerController = MultipeerController.sharedInstance
+        
+        for peer: MCPeerID in mulitpeerController.peers {
+            
+            if peer.displayName == creator {
+                do {
+                    let data: NSData = NSKeyedArchiver.archivedDataWithRootObject([
+                        "call" : "joinRequest",
+                        "groupId" : groupId
+                    ])
+                    try mulitpeerController.session.sendData(data, toPeers: [peer], withMode: .Reliable)
+                } catch {
+                    print("Could not send data to: \(peer.displayName)")
+                }
+            }
+        }
     }
     
     // unused application methods
     func applicationWillResignActive(application: UIApplication) {}
-    func applicationDidBecomeActive(application: UIApplication) {}
+    func applicationWillEnterForeground(application: UIApplication) {}
     
     // MARK: - Network reachability
     

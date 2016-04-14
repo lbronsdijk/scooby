@@ -1,0 +1,725 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		010651DD13EAC9344283F4B7A24CCA58 /* ionicons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C3F750582BE18F44E8BF0FD56A501D00 /* ionicons.bundle */; };
+		0552DA26CD7D241020B0187CDDFD31DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */; };
+		33E7C037265CA2235032FAF47B47CA0A /* QRCode-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9230E135B97E98895DD0EE77BB2814DF /* QRCode-dummy.m */; };
+		5733A22252DD3AD3B350683A92F4379D /* QRCode-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B6704264C6152522A0C0E36D1D586BF /* QRCode-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59E3B75D22B5411B7302ABB525713101 /* ionicons-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF3A56ADF9D3838DAA9119019D0E0F3B /* ionicons-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A15891CE6D9B6E81341B16A33DE1DFC /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E54BE479745342C3D6281A5FE9B527B /* QRCode.swift */; };
+		87023BC7510334811627DAD85BF97219 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E6FFAE6263C585EF3D8AB979657 /* UIImageViewExtension.swift */; };
+		93F836E57AA2A0E65F77BF6A437EDD0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */; };
+		B2A83CB81B372A2AAFA6C5479987677B /* IonIcons.h in Headers */ = {isa = PBXBuildFile; fileRef = 06DB8BDE78348F96075AD9DC5B6E1C0E /* IonIcons.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C265538D0923ED78113D7FBCCBF2C78B /* Pods-scooby-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC319F3EEB5ACDB7D6F372F44A349063 /* Pods-scooby-dummy.m */; };
+		D27EB2A813195C6BDDB83456241937E2 /* FontInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = 13CBB1518D32CE1C9D0C86B6A4C45143 /* FontInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3090543B9856B57D70A6F7092BF45A5 /* ionicons-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B1311D876A447E988485A470E87B9E /* ionicons-dummy.m */; };
+		DA52DD44115DC02F9F248D4FA9DB14AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */; };
+		DB376A53D7D76E5044296CD5366E4360 /* IonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = D0230E49CC415536BA89DD7507F52E63 /* IonIcons.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DCC921E740C5A578E75D874E957B4594 /* CIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4D77D8F52308BF37EFB623B2B9DA7C /* CIColorExtension.swift */; };
+		E6A30599C121FF925864A50EA0DAE59A /* FontInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 946458DE21B8736E122D34BBDF5137BC /* FontInspector.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F102B403965C32F117CD341907E0D971 /* ionicons-codes.h in Headers */ = {isa = PBXBuildFile; fileRef = 18D060AADC1693C5287D18EDB515CC83 /* ionicons-codes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F269A239A43136E34EA5CDAB37D02B17 /* Pods-scooby-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B18BB652CE3D0B9B0F2DA7A62D1340B /* Pods-scooby-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D388C05FF901CA48BADF128C4C7193B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81FBB7E25FAC11BE4142745695ECF417;
+			remoteInfo = ionicons;
+		};
+		E31B4405C1A59736571E9664A77CE2E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3341E6717DF9DC51D01E4A4089DDB54E;
+			remoteInfo = QRCode;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06DB8BDE78348F96075AD9DC5B6E1C0E /* IonIcons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IonIcons.h; path = ionicons/IonIcons.h; sourceTree = "<group>"; };
+		0B4D77D8F52308BF37EFB623B2B9DA7C /* CIColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CIColorExtension.swift; path = QRCode/CIColorExtension.swift; sourceTree = "<group>"; };
+		13CBB1518D32CE1C9D0C86B6A4C45143 /* FontInspector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FontInspector.h; path = ionicons/FontInspector.h; sourceTree = "<group>"; };
+		18D060AADC1693C5287D18EDB515CC83 /* ionicons-codes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ionicons-codes.h"; path = "ionicons/ionicons-codes.h"; sourceTree = "<group>"; };
+		1A1FAEBB6C1A31B5282AD2CF24270CD8 /* ionicons.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ionicons.xcconfig; sourceTree = "<group>"; };
+		1BEFA3579293B63B974A7780F6657509 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28DD318B65006B75FEBED39CD90AE7FF /* Pods-scooby-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-scooby-resources.sh"; sourceTree = "<group>"; };
+		2ADFB9993B1A8CDD725B68F96D6B84BA /* QRCode-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCode-prefix.pch"; sourceTree = "<group>"; };
+		36539E6FFAE6263C585EF3D8AB979657 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageViewExtension.swift; path = QRCode/UIImageViewExtension.swift; sourceTree = "<group>"; };
+		3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3B6704264C6152522A0C0E36D1D586BF /* QRCode-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCode-umbrella.h"; sourceTree = "<group>"; };
+		4AAA9E555D075891F34D9BC6A3562670 /* ionicons.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ionicons.modulemap; sourceTree = "<group>"; };
+		4B18BB652CE3D0B9B0F2DA7A62D1340B /* Pods-scooby-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-scooby-umbrella.h"; sourceTree = "<group>"; };
+		4E54BE479745342C3D6281A5FE9B527B /* QRCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCode.swift; path = QRCode/QRCode.swift; sourceTree = "<group>"; };
+		58824264853AC6524648F5554BEC9D9E /* Pods_scooby.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_scooby.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BD16240B8917CD3B9870C2E331BA5D1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		666523DBC338014E5C1D7BA8AAB4A62A /* Pods-scooby-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-scooby-acknowledgements.plist"; sourceTree = "<group>"; };
+		7DD5321380AB0C573D3AF1C699087785 /* Pods-scooby.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-scooby.debug.xcconfig"; sourceTree = "<group>"; };
+		8189F8131A3BDFA968ADEDB2080E0DB4 /* Pods-scooby.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-scooby.modulemap"; sourceTree = "<group>"; };
+		859A0AFE788D1B2209EBDCC9E0F43702 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A80C6A81ABA5E06D967F15A011AE55D /* Pods-scooby-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-scooby-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9230E135B97E98895DD0EE77BB2814DF /* QRCode-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QRCode-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		946458DE21B8736E122D34BBDF5137BC /* FontInspector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FontInspector.m; path = ionicons/FontInspector.m; sourceTree = "<group>"; };
+		97CD7870A04F0E6F10081B689C4CEF03 /* Pods-scooby-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-scooby-frameworks.sh"; sourceTree = "<group>"; };
+		A04986B5832D48269470FAA5C4B375C6 /* QRCode.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QRCode.xcconfig; sourceTree = "<group>"; };
+		A805066B0AD1109A2E529BBC3635E550 /* QRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF3A56ADF9D3838DAA9119019D0E0F3B /* ionicons-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ionicons-umbrella.h"; sourceTree = "<group>"; };
+		BEA8019CB5A0B2DF70620DF025CDA28A /* Pods-scooby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-scooby.release.xcconfig"; sourceTree = "<group>"; };
+		C3F750582BE18F44E8BF0FD56A501D00 /* ionicons.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = ionicons.bundle; path = ionicons/ionicons.bundle; sourceTree = "<group>"; };
+		C9B1311D876A447E988485A470E87B9E /* ionicons-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ionicons-dummy.m"; sourceTree = "<group>"; };
+		CB3496B9A7C3780014CD234659DC5C82 /* QRCode.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = QRCode.modulemap; sourceTree = "<group>"; };
+		D0230E49CC415536BA89DD7507F52E63 /* IonIcons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IonIcons.m; path = ionicons/IonIcons.m; sourceTree = "<group>"; };
+		D7F3204D1B9368E8E126FB3FF2788530 /* ionicons-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ionicons-prefix.pch"; sourceTree = "<group>"; };
+		DBE916F7A6274A2E4573ABB03890246A /* ionicons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ionicons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC319F3EEB5ACDB7D6F372F44A349063 /* Pods-scooby-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-scooby-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43A3C31AF86E5A3EBDACC53E46B4E3B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0552DA26CD7D241020B0187CDDFD31DF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		470EC7DE69900B526DC302EC41A226BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93F836E57AA2A0E65F77BF6A437EDD0A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92634339E4E2168E17D0D0CB7B3935B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA52DD44115DC02F9F248D4FA9DB14AC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06C9C3B673ECF4E57D3E9B4A8F9396B8 /* Pods-scooby */ = {
+			isa = PBXGroup;
+			children = (
+				1BEFA3579293B63B974A7780F6657509 /* Info.plist */,
+				8189F8131A3BDFA968ADEDB2080E0DB4 /* Pods-scooby.modulemap */,
+				8A80C6A81ABA5E06D967F15A011AE55D /* Pods-scooby-acknowledgements.markdown */,
+				666523DBC338014E5C1D7BA8AAB4A62A /* Pods-scooby-acknowledgements.plist */,
+				EC319F3EEB5ACDB7D6F372F44A349063 /* Pods-scooby-dummy.m */,
+				97CD7870A04F0E6F10081B689C4CEF03 /* Pods-scooby-frameworks.sh */,
+				28DD318B65006B75FEBED39CD90AE7FF /* Pods-scooby-resources.sh */,
+				4B18BB652CE3D0B9B0F2DA7A62D1340B /* Pods-scooby-umbrella.h */,
+				7DD5321380AB0C573D3AF1C699087785 /* Pods-scooby.debug.xcconfig */,
+				BEA8019CB5A0B2DF70620DF025CDA28A /* Pods-scooby.release.xcconfig */,
+			);
+			name = "Pods-scooby";
+			path = "Target Support Files/Pods-scooby";
+			sourceTree = "<group>";
+		};
+		112C7921E3A497328D11F4930CBBC9CA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		3D27D2AEFFB0B4CF452AEE3F80EB14D4 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				06C9C3B673ECF4E57D3E9B4A8F9396B8 /* Pods-scooby */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3D4CBF84230D4BF6397BA4DFEDB809C3 /* ionicons */ = {
+			isa = PBXGroup;
+			children = (
+				13CBB1518D32CE1C9D0C86B6A4C45143 /* FontInspector.h */,
+				946458DE21B8736E122D34BBDF5137BC /* FontInspector.m */,
+				06DB8BDE78348F96075AD9DC5B6E1C0E /* IonIcons.h */,
+				D0230E49CC415536BA89DD7507F52E63 /* IonIcons.m */,
+				18D060AADC1693C5287D18EDB515CC83 /* ionicons-codes.h */,
+				DC34385A460E57402264BD9B6937C21C /* Resources */,
+				8D6FEAD8AEA630750D8C252C894FED7F /* Support Files */,
+			);
+			path = ionicons;
+			sourceTree = "<group>";
+		};
+		432671A187FDC398220768CDE6E2EAFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBE916F7A6274A2E4573ABB03890246A /* ionicons.framework */,
+				58824264853AC6524648F5554BEC9D9E /* Pods_scooby.framework */,
+				A805066B0AD1109A2E529BBC3635E550 /* QRCode.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				B6D32BB25721E44A0E15E2AFFD80D883 /* Pods */,
+				432671A187FDC398220768CDE6E2EAFE /* Products */,
+				3D27D2AEFFB0B4CF452AEE3F80EB14D4 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8D6FEAD8AEA630750D8C252C894FED7F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BD16240B8917CD3B9870C2E331BA5D1 /* Info.plist */,
+				4AAA9E555D075891F34D9BC6A3562670 /* ionicons.modulemap */,
+				1A1FAEBB6C1A31B5282AD2CF24270CD8 /* ionicons.xcconfig */,
+				C9B1311D876A447E988485A470E87B9E /* ionicons-dummy.m */,
+				D7F3204D1B9368E8E126FB3FF2788530 /* ionicons-prefix.pch */,
+				AF3A56ADF9D3838DAA9119019D0E0F3B /* ionicons-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ionicons";
+			sourceTree = "<group>";
+		};
+		B6D32BB25721E44A0E15E2AFFD80D883 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D4CBF84230D4BF6397BA4DFEDB809C3 /* ionicons */,
+				D886DB2C7586BE2F49AE62ADBAE4E935 /* QRCode */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				112C7921E3A497328D11F4930CBBC9CA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCBE6DAB71F1A88B67A5F7959AB0DDC3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				859A0AFE788D1B2209EBDCC9E0F43702 /* Info.plist */,
+				CB3496B9A7C3780014CD234659DC5C82 /* QRCode.modulemap */,
+				A04986B5832D48269470FAA5C4B375C6 /* QRCode.xcconfig */,
+				9230E135B97E98895DD0EE77BB2814DF /* QRCode-dummy.m */,
+				2ADFB9993B1A8CDD725B68F96D6B84BA /* QRCode-prefix.pch */,
+				3B6704264C6152522A0C0E36D1D586BF /* QRCode-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/QRCode";
+			sourceTree = "<group>";
+		};
+		D886DB2C7586BE2F49AE62ADBAE4E935 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				0B4D77D8F52308BF37EFB623B2B9DA7C /* CIColorExtension.swift */,
+				4E54BE479745342C3D6281A5FE9B527B /* QRCode.swift */,
+				36539E6FFAE6263C585EF3D8AB979657 /* UIImageViewExtension.swift */,
+				CCBE6DAB71F1A88B67A5F7959AB0DDC3 /* Support Files */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		DC34385A460E57402264BD9B6937C21C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C3F750582BE18F44E8BF0FD56A501D00 /* ionicons.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		28666C5608ECC06F5AF6F6A68C0FDDD9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5733A22252DD3AD3B350683A92F4379D /* QRCode-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A4EE5BAED3410FDE6A287A380955B3A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D27EB2A813195C6BDDB83456241937E2 /* FontInspector.h in Headers */,
+				F102B403965C32F117CD341907E0D971 /* ionicons-codes.h in Headers */,
+				59E3B75D22B5411B7302ABB525713101 /* ionicons-umbrella.h in Headers */,
+				B2A83CB81B372A2AAFA6C5479987677B /* IonIcons.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C24EDF8E700FA570164CDD9597992E37 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F269A239A43136E34EA5CDAB37D02B17 /* Pods-scooby-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		13981ECCA9E9DB0AB29071B5407A888C /* Pods-scooby */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1C16D24131B40568ED856D923D521DA /* Build configuration list for PBXNativeTarget "Pods-scooby" */;
+			buildPhases = (
+				4AC328932A6293D46CF950F651738B28 /* Sources */,
+				470EC7DE69900B526DC302EC41A226BD /* Frameworks */,
+				C24EDF8E700FA570164CDD9597992E37 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1471CB345540817436E3153EAD6214B1 /* PBXTargetDependency */,
+				E585C3612AABE79EFFB88F6C6F3EABBB /* PBXTargetDependency */,
+			);
+			name = "Pods-scooby";
+			productName = "Pods-scooby";
+			productReference = 58824264853AC6524648F5554BEC9D9E /* Pods_scooby.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3341E6717DF9DC51D01E4A4089DDB54E /* QRCode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8A9365AFF8B1F4D2AA5C6E7CC545679 /* Build configuration list for PBXNativeTarget "QRCode" */;
+			buildPhases = (
+				23E19F4D871742E373DFF9F0E666443B /* Sources */,
+				43A3C31AF86E5A3EBDACC53E46B4E3B9 /* Frameworks */,
+				28666C5608ECC06F5AF6F6A68C0FDDD9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QRCode;
+			productName = QRCode;
+			productReference = A805066B0AD1109A2E529BBC3635E550 /* QRCode.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		81FBB7E25FAC11BE4142745695ECF417 /* ionicons */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D91FD969209EF481945FB1EF2FD1E632 /* Build configuration list for PBXNativeTarget "ionicons" */;
+			buildPhases = (
+				EAA6EE9472F637192F13C70C875EC35D /* Sources */,
+				92634339E4E2168E17D0D0CB7B3935B6 /* Frameworks */,
+				9A4EE5BAED3410FDE6A287A380955B3A /* Headers */,
+				97C3F1DA2514F40C046A5BFE5AC5437A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ionicons;
+			productName = ionicons;
+			productReference = DBE916F7A6274A2E4573ABB03890246A /* ionicons.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 432671A187FDC398220768CDE6E2EAFE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				81FBB7E25FAC11BE4142745695ECF417 /* ionicons */,
+				13981ECCA9E9DB0AB29071B5407A888C /* Pods-scooby */,
+				3341E6717DF9DC51D01E4A4089DDB54E /* QRCode */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		97C3F1DA2514F40C046A5BFE5AC5437A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				010651DD13EAC9344283F4B7A24CCA58 /* ionicons.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23E19F4D871742E373DFF9F0E666443B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCC921E740C5A578E75D874E957B4594 /* CIColorExtension.swift in Sources */,
+				33E7C037265CA2235032FAF47B47CA0A /* QRCode-dummy.m in Sources */,
+				7A15891CE6D9B6E81341B16A33DE1DFC /* QRCode.swift in Sources */,
+				87023BC7510334811627DAD85BF97219 /* UIImageViewExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AC328932A6293D46CF950F651738B28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C265538D0923ED78113D7FBCCBF2C78B /* Pods-scooby-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAA6EE9472F637192F13C70C875EC35D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6A30599C121FF925864A50EA0DAE59A /* FontInspector.m in Sources */,
+				D3090543B9856B57D70A6F7092BF45A5 /* ionicons-dummy.m in Sources */,
+				DB376A53D7D76E5044296CD5366E4360 /* IonIcons.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1471CB345540817436E3153EAD6214B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QRCode;
+			target = 3341E6717DF9DC51D01E4A4089DDB54E /* QRCode */;
+			targetProxy = E31B4405C1A59736571E9664A77CE2E5 /* PBXContainerItemProxy */;
+		};
+		E585C3612AABE79EFFB88F6C6F3EABBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ionicons;
+			target = 81FBB7E25FAC11BE4142745695ECF417 /* ionicons */;
+			targetProxy = D388C05FF901CA48BADF128C4C7193B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1E61DA1495C8B0DCC5419440F040EB1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A1FAEBB6C1A31B5282AD2CF24270CD8 /* ionicons.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ionicons/ionicons-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ionicons/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ionicons/ionicons.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ionicons;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5BAE7737AE36E9C090377E427A91E6E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A1FAEBB6C1A31B5282AD2CF24270CD8 /* ionicons.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ionicons/ionicons-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ionicons/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ionicons/ionicons.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ionicons;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		811519CB8F683AC06F9C98B55AC40F11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8765369520ACA600474DFA3D2F8E034D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEA8019CB5A0B2DF70620DF025CDA28A /* Pods-scooby.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-scooby/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-scooby/Pods-scooby.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_scooby;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		882EB4391EC2E701934974DA86F7343F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9C2D71174DECAC89FD32305BF1C59A7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A04986B5832D48269470FAA5C4B375C6 /* QRCode.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/QRCode/QRCode-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QRCode/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/QRCode/QRCode.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = QRCode;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BC3B4064F2D30EABEED4DD188DFBE3A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A04986B5832D48269470FAA5C4B375C6 /* QRCode.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/QRCode/QRCode-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QRCode/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/QRCode/QRCode.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = QRCode;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D236800C6371BA66AE0DC8FF139E1307 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DD5321380AB0C573D3AF1C699087785 /* Pods-scooby.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-scooby/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-scooby/Pods-scooby.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_scooby;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				882EB4391EC2E701934974DA86F7343F /* Debug */,
+				811519CB8F683AC06F9C98B55AC40F11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8A9365AFF8B1F4D2AA5C6E7CC545679 /* Build configuration list for PBXNativeTarget "QRCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC3B4064F2D30EABEED4DD188DFBE3A5 /* Debug */,
+				9C2D71174DECAC89FD32305BF1C59A7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D91FD969209EF481945FB1EF2FD1E632 /* Build configuration list for PBXNativeTarget "ionicons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E61DA1495C8B0DCC5419440F040EB1E /* Debug */,
+				5BAE7737AE36E9C090377E427A91E6E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1C16D24131B40568ED856D923D521DA /* Build configuration list for PBXNativeTarget "Pods-scooby" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D236800C6371BA66AE0DC8FF139E1307 /* Debug */,
+				8765369520ACA600474DFA3D2F8E034D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

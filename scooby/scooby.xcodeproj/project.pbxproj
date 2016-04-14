@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		767DFABC483D1669BA01359E /* Pods_scooby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD4798F85706357B031F620E /* Pods_scooby.framework */; };
 		89702D071CBBC7A700A8256F /* MultipeerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89702D061CBBC7A700A8256F /* MultipeerController.swift */; };
 		89702D091CBBC82900A8256F /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89702D081CBBC82900A8256F /* MultipeerConnectivity.framework */; };
 		897E6F461CBBB2B9008741B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E6F451CBBB2B9008741B8 /* AppDelegate.swift */; };
-		897E6F481CBBB2B9008741B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E6F471CBBB2B9008741B8 /* ViewController.swift */; };
+		897E6F481CBBB2B9008741B8 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E6F471CBBB2B9008741B8 /* DashboardViewController.swift */; };
 		897E6F4E1CBBB2BA008741B8 /* scooby.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 897E6F4C1CBBB2BA008741B8 /* scooby.xcdatamodeld */; };
 		897E6F501CBBB2BA008741B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 897E6F4F1CBBB2BA008741B8 /* Assets.xcassets */; };
 		897E6F611CBBB87F008741B8 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E6F601CBBB87F008741B8 /* Reachability.swift */; };
@@ -29,14 +30,27 @@
 		897E6F801CBBBAAA008741B8 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 897E6F761CBBBAAA008741B8 /* OpenSans-Regular.ttf */; };
 		897E6F811CBBBAAA008741B8 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 897E6F771CBBBAAA008741B8 /* OpenSans-Semibold.ttf */; };
 		897E6F821CBBBAAA008741B8 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 897E6F781CBBBAAA008741B8 /* OpenSans-SemiboldItalic.ttf */; };
+		898306821CBCFB8300D92F94 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898306811CBCFB8300D92F94 /* BaseViewController.swift */; };
+		898306841CBCFBB700D92F94 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898306831CBCFBB700D92F94 /* BaseView.swift */; };
+		898306861CBCFBFB00D92F94 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898306851CBCFBFB00D92F94 /* DashboardView.swift */; };
+		89E32DEC1CBE6974007C947F /* RandomString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E32DEB1CBE6974007C947F /* RandomString.swift */; };
+		89E32DEE1CBE6D31007C947F /* GroupPortalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E32DED1CBE6D31007C947F /* GroupPortalViewController.swift */; };
+		89E32DF01CBE6F3F007C947F /* GroupPortalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E32DEF1CBE6F3F007C947F /* GroupPortalView.swift */; };
+		89E32DF21CBE724E007C947F /* OutlineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E32DF11CBE724E007C947F /* OutlineButton.swift */; };
+		89E32DF41CBE7A78007C947F /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E32DF31CBE7A78007C947F /* GroupViewController.swift */; };
+		89E32DF61CBE7ACB007C947F /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E32DF51CBE7ACB007C947F /* GroupView.swift */; };
+		89E32DF81CBE86A3007C947F /* QueryDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E32DF71CBE86A3007C947F /* QueryDictionary.swift */; };
+		89E32DFA1CBFD5AD007C947F /* Datacalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E32DF91CBFD5AC007C947F /* Datacalls.swift */; };
+		89EE70E31CBE5EE0009348A2 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EE70E21CBE5EE0009348A2 /* Group.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39F92C2D387B9F52B278159A /* Pods-scooby.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scooby.debug.xcconfig"; path = "Pods/Target Support Files/Pods-scooby/Pods-scooby.debug.xcconfig"; sourceTree = "<group>"; };
 		89702D061CBBC7A700A8256F /* MultipeerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MultipeerController.swift; path = Controllers/MultipeerController.swift; sourceTree = "<group>"; };
 		89702D081CBBC82900A8256F /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 		897E6F421CBBB2B9008741B8 /* scooby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scooby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		897E6F451CBBB2B9008741B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		897E6F471CBBB2B9008741B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		897E6F471CBBB2B9008741B8 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		897E6F4D1CBBB2BA008741B8 /* scooby.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = scooby.xcdatamodel; sourceTree = "<group>"; };
 		897E6F4F1CBBB2BA008741B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		897E6F541CBBB2BA008741B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +70,20 @@
 		897E6F761CBBBAAA008741B8 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		897E6F771CBBBAAA008741B8 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		897E6F781CBBBAAA008741B8 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		898306811CBCFB8300D92F94 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Controllers/ViewControllers/BaseViewController.swift; sourceTree = "<group>"; };
+		898306831CBCFBB700D92F94 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = Views/BaseView.swift; sourceTree = "<group>"; };
+		898306851CBCFBFB00D92F94 /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardView.swift; path = Views/DashboardView.swift; sourceTree = "<group>"; };
+		89E32DEB1CBE6974007C947F /* RandomString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RandomString.swift; path = Helpers/Constants/RandomString.swift; sourceTree = "<group>"; };
+		89E32DED1CBE6D31007C947F /* GroupPortalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupPortalViewController.swift; path = Controllers/ViewControllers/GroupPortalViewController.swift; sourceTree = "<group>"; };
+		89E32DEF1CBE6F3F007C947F /* GroupPortalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupPortalView.swift; path = Views/GroupPortalView.swift; sourceTree = "<group>"; };
+		89E32DF11CBE724E007C947F /* OutlineButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OutlineButton.swift; path = Models/OutlineButton.swift; sourceTree = "<group>"; };
+		89E32DF31CBE7A78007C947F /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupViewController.swift; path = Controllers/ViewControllers/GroupViewController.swift; sourceTree = "<group>"; };
+		89E32DF51CBE7ACB007C947F /* GroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupView.swift; path = Views/GroupView.swift; sourceTree = "<group>"; };
+		89E32DF71CBE86A3007C947F /* QueryDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QueryDictionary.swift; path = Helpers/QueryDictionary.swift; sourceTree = "<group>"; };
+		89E32DF91CBFD5AC007C947F /* Datacalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Datacalls.swift; path = Helpers/Datacalls.swift; sourceTree = "<group>"; };
+		89EE70E21CBE5EE0009348A2 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Group.swift; path = Models/Group.swift; sourceTree = "<group>"; };
+		CD4798F85706357B031F620E /* Pods_scooby.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_scooby.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5D425B72803239D4CCC5280 /* Pods-scooby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scooby.release.xcconfig"; path = "Pods/Target Support Files/Pods-scooby/Pods-scooby.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +92,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89702D091CBBC82900A8256F /* MultipeerConnectivity.framework in Frameworks */,
+				767DFABC483D1669BA01359E /* Pods_scooby.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,9 +102,10 @@
 		897E6F391CBBB2B9008741B8 = {
 			isa = PBXGroup;
 			children = (
-				89702D081CBBC82900A8256F /* MultipeerConnectivity.framework */,
 				897E6F441CBBB2B9008741B8 /* scooby */,
 				897E6F431CBBB2B9008741B8 /* Products */,
+				BA75AC29F9976F731B4C358D /* Pods */,
+				F28A1B2FACDC7ACA41227697 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,7 +126,6 @@
 				897E6F5C1CBBB795008741B8 /* Models */,
 				897E6F5D1CBBB79E008741B8 /* Views */,
 				897E6F451CBBB2B9008741B8 /* AppDelegate.swift */,
-				897E6F471CBBB2B9008741B8 /* ViewController.swift */,
 				897E6F541CBBB2BA008741B8 /* Info.plist */,
 				897E6F4C1CBBB2BA008741B8 /* scooby.xcdatamodeld */,
 			);
@@ -108,6 +137,9 @@
 			children = (
 				897E6F661CBBB93E008741B8 /* Constants */,
 				897E6F601CBBB87F008741B8 /* Reachability.swift */,
+				89E32DEB1CBE6974007C947F /* RandomString.swift */,
+				89E32DF71CBE86A3007C947F /* QueryDictionary.swift */,
+				89E32DF91CBFD5AC007C947F /* Datacalls.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -115,6 +147,7 @@
 		897E6F5B1CBBB783008741B8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				898306801CBCFB2F00D92F94 /* ViewControllers */,
 				897E6F621CBBB902008741B8 /* ErrorController.swift */,
 				897E6F641CBBB92C008741B8 /* NavigationController.swift */,
 				89702D061CBBC7A700A8256F /* MultipeerController.swift */,
@@ -125,6 +158,8 @@
 		897E6F5C1CBBB795008741B8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				89EE70E21CBE5EE0009348A2 /* Group.swift */,
+				89E32DF11CBE724E007C947F /* OutlineButton.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -132,6 +167,10 @@
 		897E6F5D1CBBB79E008741B8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				898306831CBCFBB700D92F94 /* BaseView.swift */,
+				898306851CBCFBFB00D92F94 /* DashboardView.swift */,
+				89E32DEF1CBE6F3F007C947F /* GroupPortalView.swift */,
+				89E32DF51CBE7ACB007C947F /* GroupView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -149,6 +188,7 @@
 		897E6F6D1CBBBA8A008741B8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				89EE70E11CBE5EB9009348A2 /* Frameworks */,
 				897E6F4F1CBBB2BA008741B8 /* Assets.xcassets */,
 				897E6F6E1CBBBA92008741B8 /* Fonts */,
 			);
@@ -172,6 +212,42 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		898306801CBCFB2F00D92F94 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				897E6F471CBBB2B9008741B8 /* DashboardViewController.swift */,
+				898306811CBCFB8300D92F94 /* BaseViewController.swift */,
+				89E32DED1CBE6D31007C947F /* GroupPortalViewController.swift */,
+				89E32DF31CBE7A78007C947F /* GroupViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		89EE70E11CBE5EB9009348A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89702D081CBBC82900A8256F /* MultipeerConnectivity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA75AC29F9976F731B4C358D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39F92C2D387B9F52B278159A /* Pods-scooby.debug.xcconfig */,
+				F5D425B72803239D4CCC5280 /* Pods-scooby.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F28A1B2FACDC7ACA41227697 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD4798F85706357B031F620E /* Pods_scooby.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,9 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 897E6F571CBBB2BA008741B8 /* Build configuration list for PBXNativeTarget "scooby" */;
 			buildPhases = (
+				AAD271CBD8191B89EF4145C8 /* 📦 Check Pods Manifest.lock */,
 				897E6F3E1CBBB2B9008741B8 /* Sources */,
 				897E6F3F1CBBB2B9008741B8 /* Frameworks */,
 				897E6F401CBBB2B9008741B8 /* Resources */,
+				22AB2824364E833344792A38 /* 📦 Embed Pods Frameworks */,
+				FA8F2C53030D8D6BAC137070 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,6 +283,7 @@
 				TargetAttributes = {
 					897E6F411CBBB2B9008741B8 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = WB8V832ZK2;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -251,20 +331,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		22AB2824364E833344792A38 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-scooby/Pods-scooby-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAD271CBD8191B89EF4145C8 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FA8F2C53030D8D6BAC137070 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-scooby/Pods-scooby-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		897E6F3E1CBBB2B9008741B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89E32DEE1CBE6D31007C947F /* GroupPortalViewController.swift in Sources */,
+				89E32DF01CBE6F3F007C947F /* GroupPortalView.swift in Sources */,
+				89E32DF61CBE7ACB007C947F /* GroupView.swift in Sources */,
 				897E6F6A1CBBB9E8008741B8 /* Fonts.swift in Sources */,
 				897E6F631CBBB902008741B8 /* ErrorController.swift in Sources */,
+				898306821CBCFB8300D92F94 /* BaseViewController.swift in Sources */,
+				898306841CBCFBB700D92F94 /* BaseView.swift in Sources */,
 				897E6F651CBBB92C008741B8 /* NavigationController.swift in Sources */,
 				897E6F6C1CBBBA3C008741B8 /* Device.swift in Sources */,
-				897E6F481CBBB2B9008741B8 /* ViewController.swift in Sources */,
+				897E6F481CBBB2B9008741B8 /* DashboardViewController.swift in Sources */,
+				89EE70E31CBE5EE0009348A2 /* Group.swift in Sources */,
+				89E32DFA1CBFD5AD007C947F /* Datacalls.swift in Sources */,
 				89702D071CBBC7A700A8256F /* MultipeerController.swift in Sources */,
 				897E6F681CBBB95E008741B8 /* Colors.swift in Sources */,
 				897E6F4E1CBBB2BA008741B8 /* scooby.xcdatamodeld in Sources */,
+				89E32DF41CBE7A78007C947F /* GroupViewController.swift in Sources */,
+				89E32DF81CBE86A3007C947F /* QueryDictionary.swift in Sources */,
+				89E32DEC1CBE6974007C947F /* RandomString.swift in Sources */,
+				89E32DF21CBE724E007C947F /* OutlineButton.swift in Sources */,
 				897E6F611CBBB87F008741B8 /* Reachability.swift in Sources */,
+				898306861CBCFBFB00D92F94 /* DashboardView.swift in Sources */,
 				897E6F461CBBB2B9008741B8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,27 +495,41 @@
 		};
 		897E6F581CBBB2BA008741B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39F92C2D387B9F52B278159A /* Pods-scooby.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = scooby/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = nl.lloydkeijzer.scooby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		897E6F591CBBB2BA008741B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5D425B72803239D4CCC5280 /* Pods-scooby.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = scooby/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = nl.lloydkeijzer.scooby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
