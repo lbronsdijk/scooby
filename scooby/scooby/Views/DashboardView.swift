@@ -20,7 +20,7 @@ class DashboardView: BaseView {
         super.init(frame: frame)
         
         peerTable = UITableView(frame: CGRectMake(0, 0, frame.width, frame.height), style: .Grouped)
-        peerTable.backgroundColor = UIColor(hexString: COLOR_DARKGRAY)
+        peerTable.backgroundColor = UIColor(hexString: COLOR_LIGHTGRAY)
         addSubview(peerTable)
     }
 }

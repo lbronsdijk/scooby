@@ -14,13 +14,19 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // show status bar y/n
+        UIApplication.sharedApplication().statusBarHidden = false
+        // status bar style
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         // portrait only
         (UIApplication.sharedApplication().delegate as! AppDelegate).restrictRotation = true
         // set default title
-        self.title = "Scooby"
-        // calculate view frame
-        viewRect = CGRectMake(0, 0, view.frame.width, view.frame.height - 64)
+        self.title = ""
         // remove title from back button
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        // calculate view frame
+        viewRect = CGRectMake(0, 0, view.frame.width, view.frame.height)
+        // hide keyboard when tapped around
+        self.hideKeyboardWhenTappedAround()
     }
 }

@@ -10,14 +10,10 @@ import UIKit
 
 // define custom colors here (#rrggbbaa) alpha is optional
 let COLOR_WHITE         = "#ffffff"
-let COLOR_BLACK         = "#000000"
-let COLOR_RED           = "#ff4845"
-let COLOR_GREEN         = "#48caaa"
-let COLOR_BLUE          = "#487dca"
-let COLOR_DARKGRAY      = "#1d242a"
-let COLOR_LIGHTGRAY     = "#838a90"
-let COLOR_SPOTIFYGREEN  = "#2ebd59"
-let COLOR_ITUNESBLUE    = "#4e8df2"
+let COLOR_BLACK         = "#3d2c2a"
+let COLOR_RED           = "#d84c3a"
+let COLOR_GREEN         = "#6c9491"
+let COLOR_LIGHTGRAY     = "#f0f0f0"
 
 // extending UIColor to accept hex codes
 extension UIColor {

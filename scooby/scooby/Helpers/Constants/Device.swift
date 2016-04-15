@@ -8,6 +8,9 @@
 
 import UIKit
 
+var SCREEN_WIDTH = UIScreen.mainScreen().bounds.width
+var SCREEN_HEIGHT = UIScreen.mainScreen().bounds.height
+
 // extending UIDevice to recognize device models and iOS version
 public extension UIDevice {
     

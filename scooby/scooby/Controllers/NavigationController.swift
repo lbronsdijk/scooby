@@ -12,22 +12,20 @@ class NavigationController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // show status bar y/n
-        UIApplication.sharedApplication().statusBarHidden = false
-        // status bar style
-        UIApplication.sharedApplication().statusBarStyle = .LightContent
-        
+        // is bar transparant
+        UINavigationBar.appearance().translucent = true
         // default text color
         UINavigationBar.appearance().tintColor = UIColor(hexString: COLOR_WHITE)
         // bar color
-        UINavigationBar.appearance().barTintColor = UIColor(hexString: COLOR_RED)
-        // is bar transparant
-        UINavigationBar.appearance().translucent = false
+        UINavigationBar.appearance().barTintColor = UIColor.clearColor()
+        // bar background
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        // bar shadow
+        UINavigationBar.appearance().shadowImage = UIImage()
         // bar title attributes
         UINavigationBar.appearance().titleTextAttributes = [
             NSForegroundColorAttributeName: UIColor(hexString: COLOR_WHITE)!,
-            NSFontAttributeName: UIFont(name: FONT_OPENSANSSEMIBOLD, size: 17)!
+            NSFontAttributeName: UIFont(name: FONT_AVENIRMEDIUM, size: 20)!
         ]
     }
 }

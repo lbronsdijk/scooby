@@ -26,20 +26,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(networkStatusChanged(_:)), name: ReachabilityStatusChangedNotification, object: nil)
         Reach().monitorReachabilityChanges()
         
-        // start multipeer connectivity
-        MultipeerController.displayName = "Luc"
-        MultipeerController.sharedInstance
-        
         // create the application its window
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         // create rootviewcontroller with navigation
-        let dashboardViewController = DashboardViewController()
-        let navigationController = NavigationController(rootViewController: dashboardViewController)
+        let rootViewController = (MultipeerController.displayName == nil) ? SetupViewController() : DashboardViewController()
+        let navigationController = NavigationController(rootViewController: rootViewController)
         
         // set and show rootviewcontroller
         self.window!.rootViewController = navigationController
         self.window!.makeKeyAndVisible()
+        
+        // initiate keyboard helper
+        let keyboard = Keyboard.sharedInstance
+        print("keyboard frame: \(NSStringFromCGRect(keyboard.rect()!))")
         
         return true
     }

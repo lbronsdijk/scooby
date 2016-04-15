@@ -16,6 +16,6 @@ class BaseView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor(hexString: COLOR_WHITE)
+        self.backgroundColor = UIColor(hexString: COLOR_RED)
     }
 }
