@@ -29,8 +29,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // create the application its window
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
+        // get the user display name
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let name: String? = defaults.objectForKey("displayName") as! String?
+        
         // create rootviewcontroller with navigation
-        let rootViewController = (MultipeerController.displayName == nil) ? SetupViewController() : DashboardViewController()
+        var rootViewController: UIViewController!
+        
+        if name == nil {
+            rootViewController = SetupViewController()
+        } else {
+            MultipeerController.displayName = name
+            MultipeerController.sharedInstance
+            rootViewController = DashboardViewController()
+        }
+        
         let navigationController = NavigationController(rootViewController: rootViewController)
         
         // set and show rootviewcontroller

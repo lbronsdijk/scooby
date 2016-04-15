@@ -9,8 +9,6 @@
 import UIKit
 
 class DashboardView: BaseView {
-
-    var peerTable : UITableView!
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -19,8 +17,6 @@ class DashboardView: BaseView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        peerTable = UITableView(frame: CGRectMake(0, 0, frame.width, frame.height), style: .Grouped)
-        peerTable.backgroundColor = UIColor(hexString: COLOR_LIGHTGRAY)
-        addSubview(peerTable)
+        self.backgroundColor = UIColor(hexString: COLOR_GREEN)
     }
 }

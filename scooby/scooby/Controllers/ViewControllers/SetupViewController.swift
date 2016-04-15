@@ -18,13 +18,14 @@ class SetupViewController: BaseViewController, UITextFieldDelegate, KeyboardDele
         UIApplication.sharedApplication().statusBarStyle = .Default
         // initialize view
         setupView = SetupView(frame: viewRect)
-        view.addSubview(setupView)
         // setting textfield delegate
         setupView.nameTextField.delegate = self
         // targets
         setupView.doneButton.addTarget(self, action: #selector(done), forControlEvents: .TouchUpInside)
         // disable button
-        setupView.doneButton.disable()
+        setupView.doneButton.disable(false)
+        // show setup view
+        view.addSubview(setupView)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -66,9 +67,9 @@ class SetupViewController: BaseViewController, UITextFieldDelegate, KeyboardDele
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         if (string.rangeOfCharacterFromSet(NSCharacterSet.letterCharacterSet()) != nil || string == " " || string == "") {
             if ((textField.text!.characters.count + string.characters.count - range.length) > 0) {
-                setupView.doneButton.enable()
+                setupView.doneButton.enable(true)
             } else {
-                setupView.doneButton.disable()
+                setupView.doneButton.disable(true)
             }
             return true
         } else {
@@ -82,7 +83,16 @@ class SetupViewController: BaseViewController, UITextFieldDelegate, KeyboardDele
     }
     
     func done() {
-        MultipeerController.displayName = setupView.nameTextField.text
+        
+        let name = setupView.nameTextField.text
+        
+        MultipeerController.displayName = name
+        MultipeerController.sharedInstance
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(name, forKey: "displayName")
+        defaults.synchronize()
+        
         self.presentViewController(
             NavigationController(
                 rootViewController: DashboardViewController()

@@ -48,16 +48,24 @@ class RoundedButton: UIButton {
         self.setTitleColor(color, forState: .Highlighted)
     }
     
-    func enable() {
+    func enable(animated: Bool) {
         self.enabled = true
-        UIView.animateWithDuration(0.3) {
+        if (animated) {
+            UIView.animateWithDuration(0.3) {
+                self.alpha = 1
+            }
+        } else {
             self.alpha = 1
         }
     }
     
-    func disable() {
+    func disable(animated: Bool) {
         self.enabled = false
-        UIView.animateWithDuration(0.3) { 
+        if (animated) {
+            UIView.animateWithDuration(0.3) {
+                self.alpha = 0.1
+            }
+        } else {
             self.alpha = 0.1
         }
     }
