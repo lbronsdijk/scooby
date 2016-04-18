@@ -9,7 +9,7 @@ Scooby uses Multipeer Connectivity to setup a peer-to-peer network over WiFi and
 In short terms: you don't need a 
 
 #### Requirements
-* iOS7 and higer.
+* iOS7 or higher.
 * WiFi enabled (you don't need to connect to an active WiFi network).
 * Bluetooth (3.0 or 4.0) enabled.
 * GPS enabled.
