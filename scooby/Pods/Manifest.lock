@@ -1,15 +1,18 @@
 PODS:
   - ionicons (2.0.3)
   - QRCode (0.5)
+  - SwiftQRCode (2.0.1)
 
 DEPENDENCIES:
   - ionicons
   - QRCode (~> 0.5)
+  - SwiftQRCode
 
 SPEC CHECKSUMS:
   ionicons: ec1e86e6c3316bd9942a7f024080dd75c70dd6a5
   QRCode: a249ed747aeb0f4bf5f9c58b5b001b6b3bc80073
+  SwiftQRCode: ce939b2f3ceba3a4b89a99c981cba70604e480cf
 
-PODFILE CHECKSUM: 6f3c14f5707bd36c39b47e0bb84b51fb14db399e
+PODFILE CHECKSUM: 607fcb0e2f4b91734dff17c9147f7b318496c22a
 
 COCOAPODS: 1.0.0.beta.6

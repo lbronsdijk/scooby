@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftQRCode.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ionicons.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>13981ECCA9E9DB0AB29071B5407A888C</key>
+		<key>65FEC9FD6CEC7C720C8375CFAEA7F9EC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3341E6717DF9DC51D01E4A4089DDB54E</key>
+		<key>67BEDCAFAD031AFFA1D02E0A31713C91</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>81FBB7E25FAC11BE4142745695ECF417</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC7EF12DAC1AA5759C193174191451D4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

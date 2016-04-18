@@ -122,6 +122,10 @@ class Datacalls {
         let navigationController: NavigationController = (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController as! NavigationController
         let viewController: BaseViewController = navigationController.viewControllers.last as! BaseViewController
         
+        if viewController.presentedViewController != nil {
+            viewController.presentedViewController?.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
         let groupNavigationController = NavigationController(rootViewController: GroupViewController())
         viewController.presentViewController(groupNavigationController, animated: true, completion: nil)
         

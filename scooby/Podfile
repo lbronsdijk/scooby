@@ -6,6 +6,7 @@ target 'scooby' do
 
 pod "QRCode", "~> 0.5"
 pod 'ionicons'
+pod 'SwiftQRCode'
 
 end
 

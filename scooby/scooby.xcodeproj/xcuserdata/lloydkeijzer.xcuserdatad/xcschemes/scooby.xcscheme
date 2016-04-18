@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "897E6F411CBBB2B9008741B8"
-               BuildableName = "scooby.app"
+               BuildableName = "Scooby.app"
                BlueprintName = "scooby"
                ReferencedContainer = "container:scooby.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "897E6F411CBBB2B9008741B8"
-            BuildableName = "scooby.app"
+            BuildableName = "Scooby.app"
             BlueprintName = "scooby"
             ReferencedContainer = "container:scooby.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "897E6F411CBBB2B9008741B8"
-            BuildableName = "scooby.app"
+            BuildableName = "Scooby.app"
             BlueprintName = "scooby"
             ReferencedContainer = "container:scooby.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "897E6F411CBBB2B9008741B8"
-            BuildableName = "scooby.app"
+            BuildableName = "Scooby.app"
             BlueprintName = "scooby"
             ReferencedContainer = "container:scooby.xcodeproj">
          </BuildableReference>

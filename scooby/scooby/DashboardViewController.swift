@@ -19,6 +19,20 @@ class DashboardViewController: BaseViewController {
         // initialize view
         dashboardView = DashboardView(frame: viewRect)
         view.addSubview(dashboardView)
+        
+        dashboardView.createButton.addTarget(self, action: #selector(createGroup), forControlEvents: .TouchUpInside)
+        dashboardView.joinButton.addTarget(self, action: #selector(joinGroup), forControlEvents: .TouchUpInside)
+    }
+    
+    func createGroup() {
+        GroupViewController.group = Group(creator: MultipeerController.sharedInstance.peerId)
+        let navigationController = NavigationController(rootViewController: GroupViewController())
+        self.presentViewController(navigationController, animated: true, completion: nil)
+    }
+    
+    func joinGroup() {
+        let navigationController = NavigationController(rootViewController: JoinGroupViewController())
+        self.presentViewController(navigationController, animated: true, completion: nil)
     }
 }
 

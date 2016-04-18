@@ -36,6 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // create rootviewcontroller with navigation
         var rootViewController: UIViewController!
         
+        //rootViewController = RadarViewController()
+        
         if name == nil {
             rootViewController = SetupViewController()
         } else {

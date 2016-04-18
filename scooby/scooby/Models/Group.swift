@@ -10,12 +10,17 @@ import Foundation
 import MultipeerConnectivity
 import QRCode
 
+@objc protocol GroupDelegate {
+    optional func peerDidJoin(peerID: MCPeerID)
+}
+
 class Group {
     
     var creator : MCPeerID!
     var peers : [MCPeerID]!
     var groupId : String!
     var qrCode : UIImage!
+    var delegate: GroupDelegate?
     
     init(creator : MCPeerID) {
         self.creator = creator
@@ -30,6 +35,9 @@ class Group {
         if !self.peers.contains(peer) {
             self.peers.append(peer)
             print("\(peer.displayName) joined your group")
+            if delegate != nil {
+                delegate!.peerDidJoin?(peer)
+            }
         }
     }
     
@@ -39,8 +47,10 @@ class Group {
     
     static func generateQRForGroupId(groupId: String, creatorName: String) -> UIImage? {
         let url = NSURL(string: "Scooby://?groupId=\(groupId)&creator=\(creatorName)")
-        let qrCode = QRCode(url!)
+        var qrCode = QRCode(url!)
         print("Generated qrCode with url: \(url)")
+        qrCode?.color = CIColor(rgba: "ffffffff")
+        qrCode?.backgroundColor = CIColor(rgba: "d84c3aff")
         return qrCode?.image
     }
 }

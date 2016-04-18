@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		767DFABC483D1669BA01359E /* Pods_scooby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD4798F85706357B031F620E /* Pods_scooby.framework */; };
+		892DECB01CC4F63600EB2B51 /* JoinGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892DECAF1CC4F63600EB2B51 /* JoinGroupViewController.swift */; };
+		892DECB21CC4F82400EB2B51 /* JoinGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892DECB11CC4F82400EB2B51 /* JoinGroupView.swift */; };
+		892DECB41CC518ED00EB2B51 /* RadarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892DECB31CC518ED00EB2B51 /* RadarViewController.swift */; };
+		892DECB61CC5190400EB2B51 /* RadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892DECB51CC5190400EB2B51 /* RadarView.swift */; };
 		89702D071CBBC7A700A8256F /* MultipeerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89702D061CBBC7A700A8256F /* MultipeerController.swift */; };
 		89702D091CBBC82900A8256F /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89702D081CBBC82900A8256F /* MultipeerConnectivity.framework */; };
 		897E6F461CBBB2B9008741B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E6F451CBBB2B9008741B8 /* AppDelegate.swift */; };
@@ -41,8 +45,6 @@
 		8990CCF71CC16FE70042AE84 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990CCF61CC16FE70042AE84 /* Keyboard.swift */; };
 		8990CCF91CC179FE0042AE84 /* KeyboardHider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990CCF81CC179FE0042AE84 /* KeyboardHider.swift */; };
 		89E32DEC1CBE6974007C947F /* RandomString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E32DEB1CBE6974007C947F /* RandomString.swift */; };
-		89E32DEE1CBE6D31007C947F /* GroupPortalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E32DED1CBE6D31007C947F /* GroupPortalViewController.swift */; };
-		89E32DF01CBE6F3F007C947F /* GroupPortalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E32DEF1CBE6F3F007C947F /* GroupPortalView.swift */; };
 		89E32DF21CBE724E007C947F /* OutlineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E32DF11CBE724E007C947F /* OutlineButton.swift */; };
 		89E32DF41CBE7A78007C947F /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E32DF31CBE7A78007C947F /* GroupViewController.swift */; };
 		89E32DF61CBE7ACB007C947F /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E32DF51CBE7ACB007C947F /* GroupView.swift */; };
@@ -53,6 +55,10 @@
 
 /* Begin PBXFileReference section */
 		39F92C2D387B9F52B278159A /* Pods-scooby.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scooby.debug.xcconfig"; path = "Pods/Target Support Files/Pods-scooby/Pods-scooby.debug.xcconfig"; sourceTree = "<group>"; };
+		892DECAF1CC4F63600EB2B51 /* JoinGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JoinGroupViewController.swift; path = Controllers/ViewControllers/JoinGroupViewController.swift; sourceTree = "<group>"; };
+		892DECB11CC4F82400EB2B51 /* JoinGroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JoinGroupView.swift; path = Views/JoinGroupView.swift; sourceTree = "<group>"; };
+		892DECB31CC518ED00EB2B51 /* RadarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadarViewController.swift; path = Controllers/ViewControllers/RadarViewController.swift; sourceTree = "<group>"; };
+		892DECB51CC5190400EB2B51 /* RadarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadarView.swift; path = Views/RadarView.swift; sourceTree = "<group>"; };
 		89702D061CBBC7A700A8256F /* MultipeerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MultipeerController.swift; path = Controllers/MultipeerController.swift; sourceTree = "<group>"; };
 		89702D081CBBC82900A8256F /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 		897E6F421CBBB2B9008741B8 /* Scooby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scooby.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,8 +94,6 @@
 		8990CCF61CC16FE70042AE84 /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Keyboard.swift; path = Helpers/Keyboard.swift; sourceTree = "<group>"; };
 		8990CCF81CC179FE0042AE84 /* KeyboardHider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardHider.swift; path = Helpers/KeyboardHider.swift; sourceTree = "<group>"; };
 		89E32DEB1CBE6974007C947F /* RandomString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RandomString.swift; path = Helpers/Constants/RandomString.swift; sourceTree = "<group>"; };
-		89E32DED1CBE6D31007C947F /* GroupPortalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupPortalViewController.swift; path = Controllers/ViewControllers/GroupPortalViewController.swift; sourceTree = "<group>"; };
-		89E32DEF1CBE6F3F007C947F /* GroupPortalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupPortalView.swift; path = Views/GroupPortalView.swift; sourceTree = "<group>"; };
 		89E32DF11CBE724E007C947F /* OutlineButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OutlineButton.swift; path = Models/OutlineButton.swift; sourceTree = "<group>"; };
 		89E32DF31CBE7A78007C947F /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupViewController.swift; path = Controllers/ViewControllers/GroupViewController.swift; sourceTree = "<group>"; };
 		89E32DF51CBE7ACB007C947F /* GroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupView.swift; path = Views/GroupView.swift; sourceTree = "<group>"; };
@@ -187,9 +191,10 @@
 			children = (
 				898306831CBCFBB700D92F94 /* BaseView.swift */,
 				898306851CBCFBFB00D92F94 /* DashboardView.swift */,
-				89E32DEF1CBE6F3F007C947F /* GroupPortalView.swift */,
 				89E32DF51CBE7ACB007C947F /* GroupView.swift */,
 				8990CCF01CC1535F0042AE84 /* SetupView.swift */,
+				892DECB11CC4F82400EB2B51 /* JoinGroupView.swift */,
+				892DECB51CC5190400EB2B51 /* RadarView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -237,9 +242,10 @@
 			children = (
 				897E6F471CBBB2B9008741B8 /* DashboardViewController.swift */,
 				898306811CBCFB8300D92F94 /* BaseViewController.swift */,
-				89E32DED1CBE6D31007C947F /* GroupPortalViewController.swift */,
 				89E32DF31CBE7A78007C947F /* GroupViewController.swift */,
 				8990CCEE1CC153420042AE84 /* SetupViewController.swift */,
+				892DECAF1CC4F63600EB2B51 /* JoinGroupViewController.swift */,
+				892DECB31CC518ED00EB2B51 /* RadarViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -406,8 +412,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89E32DEE1CBE6D31007C947F /* GroupPortalViewController.swift in Sources */,
-				89E32DF01CBE6F3F007C947F /* GroupPortalView.swift in Sources */,
 				89E32DF61CBE7ACB007C947F /* GroupView.swift in Sources */,
 				897E6F6A1CBBB9E8008741B8 /* Fonts.swift in Sources */,
 				897E6F631CBBB902008741B8 /* ErrorController.swift in Sources */,
@@ -415,6 +419,7 @@
 				898306821CBCFB8300D92F94 /* BaseViewController.swift in Sources */,
 				8990CCF91CC179FE0042AE84 /* KeyboardHider.swift in Sources */,
 				898306841CBCFBB700D92F94 /* BaseView.swift in Sources */,
+				892DECB41CC518ED00EB2B51 /* RadarViewController.swift in Sources */,
 				897E6F651CBBB92C008741B8 /* NavigationController.swift in Sources */,
 				897E6F6C1CBBBA3C008741B8 /* Device.swift in Sources */,
 				897E6F481CBBB2B9008741B8 /* DashboardViewController.swift in Sources */,
@@ -426,10 +431,13 @@
 				897E6F4E1CBBB2BA008741B8 /* scooby.xcdatamodeld in Sources */,
 				89E32DF41CBE7A78007C947F /* GroupViewController.swift in Sources */,
 				89E32DF81CBE86A3007C947F /* QueryDictionary.swift in Sources */,
+				892DECB21CC4F82400EB2B51 /* JoinGroupView.swift in Sources */,
 				89E32DEC1CBE6974007C947F /* RandomString.swift in Sources */,
+				892DECB01CC4F63600EB2B51 /* JoinGroupViewController.swift in Sources */,
 				89E32DF21CBE724E007C947F /* OutlineButton.swift in Sources */,
 				897E6F611CBBB87F008741B8 /* Reachability.swift in Sources */,
 				8990CCF31CC15BC50042AE84 /* RoundedButton.swift in Sources */,
+				892DECB61CC5190400EB2B51 /* RadarView.swift in Sources */,
 				898306861CBCFBFB00D92F94 /* DashboardView.swift in Sources */,
 				8990CCF11CC1535F0042AE84 /* SetupView.swift in Sources */,
 				8990CCF51CC16D260042AE84 /* BottomBorder.swift in Sources */,

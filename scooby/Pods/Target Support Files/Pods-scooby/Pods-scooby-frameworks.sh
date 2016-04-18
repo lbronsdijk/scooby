@@ -85,9 +85,11 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/QRCode/QRCode.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftQRCode/SwiftQRCode.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ionicons/ionicons.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/QRCode/QRCode.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftQRCode/SwiftQRCode.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ionicons/ionicons.framework"
 fi

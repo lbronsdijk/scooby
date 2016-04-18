@@ -10,29 +10,30 @@ import UIKit
 import MultipeerConnectivity
 import ionicons
 
-class GroupViewController: BaseViewController, MultipeerDelegate {
+class GroupViewController: BaseViewController, MultipeerDelegate, GroupDelegate {
 
     let mulitpeerController = MultipeerController.sharedInstance
+    
+    static var lastChangedName: String?
     
     static var group : Group?
     var groupView : GroupView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // title
-        if GroupViewController.group != nil {
-            self.title = "\(GroupViewController.group!.creator.displayName)s Group"
-        } else {
-            self.title = "Group"
-        }
         // initialize view
         groupView = GroupView(frame: viewRect)
+        if (GroupViewController.lastChangedName != nil) {
+            groupView.changeLastJoinedName(GroupViewController.lastChangedName!)
+        } else {
+            groupView.changeLastJoinedName(MultipeerController.displayName!)
+        }
         view.addSubview(groupView)
         // close button
         let closeButton = UIButton(frame: CGRectMake(0, 0, 44, 44))
         closeButton.setImage(IonIcons.imageWithIcon(
-            ion_ios_close_empty,
-            size: 44.0,
+            ion_close_round,
+            size: 24.0,
             color: UIColor(hexString: COLOR_WHITE)
             ), forState: .Normal)
         closeButton.addTarget(self, action: #selector(close), forControlEvents: .TouchUpInside)
@@ -43,6 +44,18 @@ class GroupViewController: BaseViewController, MultipeerDelegate {
         super.viewWillAppear(animated)
         // multipeer
         mulitpeerController.delegate = self
+        GroupViewController.group?.delegate = self
+    }
+    
+    func peerDidJoin(peerID: MCPeerID) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+            
+            GroupViewController.lastChangedName = peerID.displayName
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                self.groupView.changeLastJoinedName(peerID.displayName)
+            })
+        }
     }
 
     func close() {
