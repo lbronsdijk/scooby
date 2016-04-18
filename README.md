@@ -2,7 +2,7 @@
 ========
 
 
-#### Scooby Doo, where are you?
+#### Scooby Do, where are you?
 Use Scooby to find your friends back at a crowed place, such as festivals, when 3G or 4G is letting you down.
 
 Scooby uses Multipeer Connectivity to setup a peer-to-peer network over WiFi and Bluetooth, to connected with other iOS devices. 
