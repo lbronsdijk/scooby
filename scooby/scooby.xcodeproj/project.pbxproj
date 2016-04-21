@@ -42,6 +42,12 @@
 		899088711CC7973400FB1A43 /* CircleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899088701CC7973400FB1A43 /* CircleDetailView.swift */; };
 		899088751CC7B57900FB1A43 /* GroupMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899088741CC7B57900FB1A43 /* GroupMember.swift */; };
 		899088771CC7BFC400FB1A43 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899088761CC7BFC400FB1A43 /* MapKit.framework */; };
+		899088791CC8F21500FB1A43 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899088781CC8F21500FB1A43 /* LocationController.swift */; };
+		8990887B1CC9256200FB1A43 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990887A1CC9256200FB1A43 /* NavigationViewController.swift */; };
+		8990887D1CC9258200FB1A43 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990887C1CC9258200FB1A43 /* NavigationView.swift */; };
+		8990887F1CC9453B00FB1A43 /* NSCoderEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990887E1CC9453B00FB1A43 /* NSCoderEmpty.swift */; };
+		899088811CC948D600FB1A43 /* PanicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899088801CC948D600FB1A43 /* PanicViewController.swift */; };
+		899088831CC9491000FB1A43 /* PanicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899088821CC9491000FB1A43 /* PanicView.swift */; };
 		8990CCED1CC135480042AE84 /* Avenir.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 8990CCEC1CC135480042AE84 /* Avenir.ttc */; };
 		8990CCEF1CC153420042AE84 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990CCEE1CC153420042AE84 /* SetupViewController.swift */; };
 		8990CCF11CC1535F0042AE84 /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990CCF01CC1535F0042AE84 /* SetupView.swift */; };
@@ -96,6 +102,12 @@
 		899088701CC7973400FB1A43 /* CircleDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleDetailView.swift; path = Views/CircleDetailView.swift; sourceTree = "<group>"; };
 		899088741CC7B57900FB1A43 /* GroupMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupMember.swift; path = Models/GroupMember.swift; sourceTree = "<group>"; };
 		899088761CC7BFC400FB1A43 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		899088781CC8F21500FB1A43 /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationController.swift; path = Controllers/LocationController.swift; sourceTree = "<group>"; };
+		8990887A1CC9256200FB1A43 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationViewController.swift; path = Controllers/ViewControllers/NavigationViewController.swift; sourceTree = "<group>"; };
+		8990887C1CC9258200FB1A43 /* NavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationView.swift; path = Views/NavigationView.swift; sourceTree = "<group>"; };
+		8990887E1CC9453B00FB1A43 /* NSCoderEmpty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSCoderEmpty.swift; path = Helpers/NSCoderEmpty.swift; sourceTree = "<group>"; };
+		899088801CC948D600FB1A43 /* PanicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PanicViewController.swift; path = Controllers/ViewControllers/PanicViewController.swift; sourceTree = "<group>"; };
+		899088821CC9491000FB1A43 /* PanicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PanicView.swift; path = Views/PanicView.swift; sourceTree = "<group>"; };
 		8990CCEC1CC135480042AE84 /* Avenir.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Avenir.ttc; sourceTree = "<group>"; };
 		8990CCEE1CC153420042AE84 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetupViewController.swift; path = Controllers/ViewControllers/SetupViewController.swift; sourceTree = "<group>"; };
 		8990CCF01CC1535F0042AE84 /* SetupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetupView.swift; path = Views/SetupView.swift; sourceTree = "<group>"; };
@@ -172,6 +184,7 @@
 				8990CCF41CC16D260042AE84 /* BottomBorder.swift */,
 				8990CCF61CC16FE70042AE84 /* Keyboard.swift */,
 				8990CCF81CC179FE0042AE84 /* KeyboardHider.swift */,
+				8990887E1CC9453B00FB1A43 /* NSCoderEmpty.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -183,6 +196,7 @@
 				897E6F621CBBB902008741B8 /* ErrorController.swift */,
 				897E6F641CBBB92C008741B8 /* NavigationController.swift */,
 				89702D061CBBC7A700A8256F /* MultipeerController.swift */,
+				899088781CC8F21500FB1A43 /* LocationController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -210,6 +224,8 @@
 				892DECB51CC5190400EB2B51 /* RadarView.swift */,
 				8990886E1CC77DDD00FB1A43 /* CircleContainerView.swift */,
 				899088701CC7973400FB1A43 /* CircleDetailView.swift */,
+				8990887C1CC9258200FB1A43 /* NavigationView.swift */,
+				899088821CC9491000FB1A43 /* PanicView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -261,6 +277,8 @@
 				8990CCEE1CC153420042AE84 /* SetupViewController.swift */,
 				892DECAF1CC4F63600EB2B51 /* JoinGroupViewController.swift */,
 				892DECB31CC518ED00EB2B51 /* RadarViewController.swift */,
+				8990887A1CC9256200FB1A43 /* NavigationViewController.swift */,
+				899088801CC948D600FB1A43 /* PanicViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -436,11 +454,15 @@
 				898306821CBCFB8300D92F94 /* BaseViewController.swift in Sources */,
 				8990CCF91CC179FE0042AE84 /* KeyboardHider.swift in Sources */,
 				898306841CBCFBB700D92F94 /* BaseView.swift in Sources */,
+				8990887F1CC9453B00FB1A43 /* NSCoderEmpty.swift in Sources */,
 				892DECB41CC518ED00EB2B51 /* RadarViewController.swift in Sources */,
 				897E6F651CBBB92C008741B8 /* NavigationController.swift in Sources */,
+				8990887D1CC9258200FB1A43 /* NavigationView.swift in Sources */,
 				897E6F6C1CBBBA3C008741B8 /* Device.swift in Sources */,
 				899088711CC7973400FB1A43 /* CircleDetailView.swift in Sources */,
+				8990887B1CC9256200FB1A43 /* NavigationViewController.swift in Sources */,
 				897E6F481CBBB2B9008741B8 /* DashboardViewController.swift in Sources */,
+				899088791CC8F21500FB1A43 /* LocationController.swift in Sources */,
 				89EE70E31CBE5EE0009348A2 /* Group.swift in Sources */,
 				89E32DFA1CBFD5AD007C947F /* Datacalls.swift in Sources */,
 				8990886D1CC772CF00FB1A43 /* CircleView.swift in Sources */,
@@ -448,7 +470,9 @@
 				89702D071CBBC7A700A8256F /* MultipeerController.swift in Sources */,
 				897E6F681CBBB95E008741B8 /* Colors.swift in Sources */,
 				897E6F4E1CBBB2BA008741B8 /* scooby.xcdatamodeld in Sources */,
+				899088831CC9491000FB1A43 /* PanicView.swift in Sources */,
 				89E32DF41CBE7A78007C947F /* GroupViewController.swift in Sources */,
+				899088811CC948D600FB1A43 /* PanicViewController.swift in Sources */,
 				89E32DF81CBE86A3007C947F /* QueryDictionary.swift in Sources */,
 				892DECB21CC4F82400EB2B51 /* JoinGroupView.swift in Sources */,
 				89E32DEC1CBE6974007C947F /* RandomString.swift in Sources */,

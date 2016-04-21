@@ -138,7 +138,7 @@ class CircleContainerView: UIView, CircleProtocol {
         
         if circle.lineIsVisible {
             
-            let radians = CGFloat(RadarViewController.degreesToRadians(degrees))
+            let radians = CGFloat(LocationController.degreesToRadians(degrees))
             
             let radius: CGFloat = 120
             

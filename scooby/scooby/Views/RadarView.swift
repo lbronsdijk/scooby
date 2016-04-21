@@ -47,8 +47,6 @@ class RadarView: BaseView {
         nearestScoobyNameLabel.textAlignment = .Left
         addSubview(nearestScoobyNameLabel)
         
-        animateRadar()
-        
         circleContainer = CircleContainerView(frame: CGRectMake(0, 0, frame.width, frame.height))
         addSubview(circleContainer)
     }

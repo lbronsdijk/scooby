@@ -12,6 +12,7 @@ class GroupView: BaseView {
 
     var partyButton: RoundedButton!
     var lastJoinedScoobyNameLabel: UILabel!
+    var addScoobies: UILabel!
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -24,10 +25,10 @@ class GroupView: BaseView {
             return
         }
         
-        let addScoobies = UILabel(frame: CGRectMake(0, 0, frame.width - 120, 80))
+        addScoobies = UILabel(frame: CGRectMake(0, 0, frame.width - 120, 80))
         addScoobies.font = UIFont(name: FONT_AVENIRHEAVY, size: (IS_IPHONE4) ? 32 : 36)
         addScoobies.textColor = UIColor(hexString: COLOR_WHITE)
-        addScoobies.text = "Add Scoobies"
+        addScoobies.text = "Create a crew"
         addScoobies.textAlignment = .Center
         addScoobies.numberOfLines = 1
         addScoobies.sizeToFit()

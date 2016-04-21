@@ -36,9 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // create rootviewcontroller with navigation
         var rootViewController: UIViewController!
         
-//        MultipeerController.displayName = name
-//        rootViewController = RadarViewController()
-        
         if name == nil {
             rootViewController = SetupViewController()
         } else {
@@ -56,6 +53,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // initiate keyboard helper
         let keyboard = Keyboard.sharedInstance
         print("keyboard frame: \(NSStringFromCGRect(keyboard.rect()!))")
+        
+        // initate location manager
+        LocationController.sharedInstance
         
         return true
     }

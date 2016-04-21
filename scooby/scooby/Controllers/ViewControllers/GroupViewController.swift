@@ -14,13 +14,27 @@ class GroupViewController: BaseViewController, MultipeerDelegate, GroupDelegate 
 
     let mulitpeerController = MultipeerController.sharedInstance
     
+    var fromRadar: Bool = false
+    
     static var lastChangedName: String?
     
     static var group : Group?
     var groupView : GroupView!
     
+    init(coder: NSCoder = NSCoder.empty(), fromRadar: Bool = false) {
+        super.init(coder: coder)!
+        self.fromRadar = fromRadar
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        LocationController.sharedInstance.startLocating()
+        
         // initialize view
         groupView = GroupView(frame: viewRect)
         if (GroupViewController.lastChangedName != nil) {
@@ -38,8 +52,14 @@ class GroupViewController: BaseViewController, MultipeerDelegate, GroupDelegate 
             ), forState: .Normal)
         closeButton.addTarget(self, action: #selector(close), forControlEvents: .TouchUpInside)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: closeButton)
-        // targets
-        groupView.partyButton.addTarget(self, action: #selector(party), forControlEvents: .TouchUpInside)
+        
+        if fromRadar {
+            groupView.addScoobies.text = "Add Scoobies"
+            groupView.partyButton.setTitle("Continue partying!")
+            groupView.partyButton.addTarget(self, action: #selector(close), forControlEvents: .TouchUpInside)
+        } else {
+            groupView.partyButton.addTarget(self, action: #selector(party), forControlEvents: .TouchUpInside)
+        } 
     }
     
     override func viewWillAppear(animated: Bool) {

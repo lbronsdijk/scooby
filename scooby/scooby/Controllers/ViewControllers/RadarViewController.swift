@@ -10,15 +10,20 @@ import UIKit
 import ionicons
 import MapKit
 
-class RadarViewController: BaseViewController, GroupDelegate, CLLocationManagerDelegate {
+class RadarViewController: BaseViewController, GroupDelegate {
 
-    static let DEBUG_MODE = true
+    static let DEBUG_MODE = false
     
     var radarView: RadarView!
-    var locationManager: CLLocationManager!
+    var stopRadar: Bool = false
+    
+    private let navigationViewController = NavigationViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        LocationController.sharedInstance.startLocating()
+        
         // initialize view
         radarView = RadarView(frame: viewRect)
         view.addSubview(radarView)
@@ -27,6 +32,15 @@ class RadarViewController: BaseViewController, GroupDelegate, CLLocationManagerD
             radarView.changeNearestScoobyName("Debug")
         }
         
+        navigationViewController.initialize(view.frame, controller: self)
+        
+        showMenuButton()
+        
+        // update radar
+        updateRadar()
+    }
+    
+    func showMenuButton() {
         // menu button
         let menuButton = UIButton(frame: CGRectMake(0, 0, 44, 44))
         menuButton.setImage(IonIcons.imageWithIcon(
@@ -34,72 +48,124 @@ class RadarViewController: BaseViewController, GroupDelegate, CLLocationManagerD
             size: 32.0,
             color: UIColor(hexString: COLOR_WHITE)
             ), forState: .Normal)
-        menuButton.addTarget(self, action: #selector(toggleMenu), forControlEvents: .TouchUpInside)
+        menuButton.addTarget(self, action: #selector(showMenu), forControlEvents: .TouchUpInside)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: menuButton)
-
-        //location manager
-        locationManager = CLLocationManager()
-        locationManager.delegate = self
-        
-        locationManager.startUpdatingHeading()
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-        
-        print("heading: \(newHeading.magneticHeading)")
-        
-        let degrees = RadarViewController.getBearingBetweenTwoPoints(
-            CLLocationCoordinate2DMake(52.0395369,4.635203), // (YOUR LOCATION) zuidplaslaan 78
-            point2: CLLocationCoordinate2DMake(52.044888,4.6480753) // (FRIEND LOCATION) centraal station
-        )
-        
-        var radarDegrees: Double = newHeading.magneticHeading + degrees
-        
-        while (radarDegrees > 360) {
-            radarDegrees -= 360
-        }
-        
-        while (radarDegrees < 0) {
-            radarDegrees += 360
-        }
-        
-        print("radarDegrees: \(radarDegrees)")
-        
-        radarView.circleContainer.moveCircleToDegree(
-            radarView.circleContainer.peerCircles.last!,
-            degrees: (radarDegrees)
-        )
+    func showCloseButton() {
+        let closeButton = UIButton(frame: CGRectMake(0, 0, 44, 44))
+        closeButton.setImage(IonIcons.imageWithIcon(
+            ion_close_round,
+            size: 24.0,
+            color: UIColor(hexString: COLOR_WHITE)
+            ), forState: .Normal)
+        closeButton.addTarget(self, action: #selector(closeMenu), forControlEvents: .TouchUpInside)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: closeButton)
     }
     
     override func viewWillAppear(animated: Bool) {
         GroupViewController.group?.delegate = self
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        stopRadar = true
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        radarView.animateRadar()
+    }
+    
     func memberDidJoin(member: GroupMember) {
         radarView.circleContainer.addCircle(member)
     }
     
-    func toggleMenu() {
-    
+    func showMenu() {
+        
+        navigationViewController.navigationView!.alpha = 0
+        view.addSubview(navigationViewController.navigationView!)
+        self.showCloseButton()
+        
+        UIView.animateWithDuration(0.3, animations: { 
+            self.navigationViewController.navigationView!.alpha = 1
+        })
     }
     
-    static func degreesToRadians(degrees: Double) -> Double { return degrees * M_PI / 180.0 }
-    static func radiansToDegrees(radians: Double) -> Double { return radians * 180.0 / M_PI }
+    func closeMenu() {
+        
+        navigationViewController.navigationView!.alpha = 1
+        showMenuButton()
+        
+        UIView.animateWithDuration(0.3, animations: {
+            self.navigationViewController.navigationView!.alpha = 0
+        }) { (Bool) in
+            self.navigationViewController.navigationView!.removeFromSuperview()
+        }
+    }
     
-    static func getBearingBetweenTwoPoints(point1 : CLLocationCoordinate2D, point2 : CLLocationCoordinate2D) -> Double {
+    func updateRadar() {
         
-        let lat1 = degreesToRadians(point1.latitude)
-        let lon1 = degreesToRadians(point1.longitude)
+        let locationController = LocationController.sharedInstance
         
-        let lat2 = degreesToRadians(point2.latitude);
-        let lon2 = degreesToRadians(point2.longitude);
+        if (locationController.location == nil || locationController.heading == nil) {
+            return
+        }
         
-        let dLon = lon2 - lon1;
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+
+            var distance: Double?
+            var nearestName: String?
+            
+            for member: GroupMember in (GroupViewController.group?.members)! {
+                
+                if (member.location == nil || member.peerId == MultipeerController.sharedInstance.peerId) {
+                    continue
+                }
+                
+                let currentDistance = LocationController.distanceBetweenCoordinates(
+                    locationController.location!,
+                    toCoordinates: member.location!
+                )
+                
+                if (distance == nil || (currentDistance < distance!)) {
+                    distance = currentDistance
+                    nearestName = member.peerId.displayName
+                }
+                
+                let degrees = LocationController.getBearingBetweenTwoPoints(
+                    locationController.location!,
+                    point2: member.location!
+                )
+                
+                var radarDegrees: Double = locationController.heading! + degrees
+                
+                while (radarDegrees > 360) {
+                    radarDegrees -= 360
+                }
+                
+                while (radarDegrees < 0) {
+                    radarDegrees += 360
+                }
+                
+                dispatch_async(dispatch_get_main_queue(), {
+                    
+                    self.radarView.circleContainer.moveCircleToDegree(
+                        self.radarView.circleContainer.peerCircles.last!,
+                        degrees: (radarDegrees)
+                    )
+                })
+            }
+            
+            if nearestName != nil {
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.radarView.changeNearestScoobyName(nearestName!)
+                })
+            }
+        }
         
-        let y = sin(dLon) * cos(lat2);
-        let x = cos(lat1) * sin(lat2) - sin(lat1) * cos(lat2) * cos(dLon);
-        let radiansBearing = atan2(y, x);
-        
-        return radiansToDegrees(radiansBearing)
+        if !self.stopRadar {
+            self.performSelector(#selector(self.updateRadar), withObject: nil, afterDelay: 0.1)
+        }
     }
 }

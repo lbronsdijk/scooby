@@ -8,6 +8,7 @@
 
 import Foundation
 import MultipeerConnectivity
+import CoreLocation
 
 class Datacalls {
     
@@ -18,21 +19,27 @@ class Datacalls {
         let dataDict: NSDictionary! = NSKeyedUnarchiver.unarchiveObjectWithData(data)! as? NSDictionary
         print("Received data from: \(sender.displayName) data: \(dataDict)")
         
-        switch dataDict?.objectForKey("call") as! String {
-            case "join":
-                Datacalls.joinCall(sender, data: dataDict)
-                break
-            case "joinRequest":
-                Datacalls.joinRequestCall(sender, data: dataDict)
-                break
-            case "joinRequestAccepted":
-                Datacalls.joinRequestAcceptedCall(sender, data: dataDict)
-                break
-            case "areYouInGroup":
-                Datacalls.areYouInGroupCall(sender, data: dataDict)
-                break
-            default:
-                break
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+        
+            switch dataDict?.objectForKey("call") as! String {
+                case "join":
+                    Datacalls.joinCall(sender, data: dataDict)
+                    break
+                case "joinRequest":
+                    Datacalls.joinRequestCall(sender, data: dataDict)
+                    break
+                case "joinRequestAccepted":
+                    Datacalls.joinRequestAcceptedCall(sender, data: dataDict)
+                    break
+                case "areYouInGroup":
+                    Datacalls.areYouInGroupCall(sender, data: dataDict)
+                    break
+                case "updateLocation":
+                    Datacalls.updateLocationCall(sender, data: dataDict)
+                    break
+                default:
+                    break
+            }
         }
     }
     
@@ -119,20 +126,18 @@ class Datacalls {
         GroupViewController.group?.groupId = groupId
         GroupViewController.group?.join(MultipeerController.sharedInstance.peerId)
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            
-            let navigationController: NavigationController = (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController as! NavigationController
-            var viewController: BaseViewController = navigationController.viewControllers.last as! BaseViewController
-            
-            if viewController.presentedViewController != nil {
-                viewController = (viewController.presentedViewController as! NavigationController).viewControllers.last as! BaseViewController
-            }
-            
-            dispatch_async(dispatch_get_main_queue(), {
-                let radarNavigationController = NavigationController(rootViewController: RadarViewController())
-                viewController.presentViewController(radarNavigationController, animated: true, completion: nil)
-            })
+        
+        let navigationController: NavigationController = (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController as! NavigationController
+        var viewController: BaseViewController = navigationController.viewControllers.last as! BaseViewController
+        
+        if viewController.presentedViewController != nil {
+            viewController = (viewController.presentedViewController as! NavigationController).viewControllers.last as! BaseViewController
         }
+        
+        dispatch_async(dispatch_get_main_queue(), {
+            let radarNavigationController = NavigationController(rootViewController: RadarViewController())
+            viewController.presentViewController(radarNavigationController, animated: true, completion: nil)
+        })
         
         for member: String in groupMembers {
             
@@ -171,11 +176,26 @@ class Datacalls {
             )
         }
     }
-
+    
+    private static func updateLocationCall(sender: MCPeerID, data: NSDictionary) {
+        
+        let lat = data.objectForKey("lat") as! String
+        let lon = data.objectForKey("lon") as! String
+        
+        let location = CLLocationCoordinate2DMake(Double(lat)!, Double(lon)!)
+        
+        for member: GroupMember in (GroupViewController.group?.members)! {
+            
+            if member.peerId == sender {
+                member.location = location
+                break
+            }
+        }
+    }
     
     // MARK: Send data
     
-    private static func sendData(call: String, data: NSDictionary, receiver: MCPeerID, successHandler: () -> Void, errorHandler: (error: AnyObject) -> Void) {
+    static func sendData(call: String, data: NSDictionary, receiver: MCPeerID, reliable: Bool = true, successHandler: () -> Void, errorHandler: (error: AnyObject) -> Void) {
         
         let mutableData = NSMutableDictionary(dictionary: data)
         mutableData.setObject(call, forKey: "call")
@@ -185,7 +205,7 @@ class Datacalls {
             try MultipeerController.sharedInstance.session.sendData(
                 archivedData,
                 toPeers: [receiver],
-                withMode: .Reliable
+                withMode: (reliable) ? .Reliable : .Unreliable
             )
             successHandler()
         } catch {
