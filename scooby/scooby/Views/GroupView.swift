@@ -10,7 +10,7 @@ import UIKit
 
 class GroupView: BaseView {
 
-    var continueButton: RoundedButton!
+    var partyButton: RoundedButton!
     var lastJoinedScoobyNameLabel: UILabel!
     
     required init?(coder aDecoder: NSCoder) {
@@ -49,12 +49,12 @@ class GroupView: BaseView {
         qrCode.image = GroupViewController.group?.qrCode
         addSubview(qrCode)
         
-        continueButton = RoundedButton(yPosition: SCREEN_HEIGHT - ((IS_IPHONE4) ? 84 : 104))
-        continueButton.center = CGPointMake(center.x, continueButton.center.y)
-        continueButton.backgroundColor = UIColor(hexString: COLOR_WHITE)
-        continueButton.setTitleColor(UIColor(hexString: COLOR_BLACK)!)
-        continueButton.setTitle("Continue partying!")
-        addSubview(continueButton)
+        partyButton = RoundedButton(yPosition: SCREEN_HEIGHT - ((IS_IPHONE4) ? 84 : 104))
+        partyButton.center = CGPointMake(center.x, partyButton.center.y)
+        partyButton.backgroundColor = UIColor(hexString: COLOR_WHITE)
+        partyButton.setTitleColor(UIColor(hexString: COLOR_BLACK)!)
+        partyButton.setTitle("Lets party!")
+        addSubview(partyButton)
         
         let lastJoinedLabel = UILabel(frame: CGRectMake(0, 0, frame.width - ((IS_IPHONE4 || IS_IPHONE5) ? 100 : 140), 80))
         lastJoinedLabel.font = UIFont(name: FONT_AVENIRLIGHT, size: 16)
@@ -63,7 +63,7 @@ class GroupView: BaseView {
         lastJoinedLabel.textAlignment = .Center
         lastJoinedLabel.numberOfLines = 1
         lastJoinedLabel.sizeToFit()
-        lastJoinedLabel.center = CGPointMake(center.x, ((continueButton.frame.origin.y - (qrCode.frame.origin.y + qrCode.frame.height)) / 2) + qrCode.frame.origin.y + qrCode.frame.height - 20)
+        lastJoinedLabel.center = CGPointMake(center.x, ((partyButton.frame.origin.y - (qrCode.frame.origin.y + qrCode.frame.height)) / 2) + qrCode.frame.origin.y + qrCode.frame.height - 20)
         addSubview(lastJoinedLabel)
         
         lastJoinedScoobyNameLabel = UILabel(frame: CGRectMake(0, lastJoinedLabel.frame.origin.y + lastJoinedLabel.frame.height, frame.width - 120, 80))

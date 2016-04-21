@@ -37,6 +37,11 @@
 		898306821CBCFB8300D92F94 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898306811CBCFB8300D92F94 /* BaseViewController.swift */; };
 		898306841CBCFBB700D92F94 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898306831CBCFBB700D92F94 /* BaseView.swift */; };
 		898306861CBCFBFB00D92F94 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898306851CBCFBFB00D92F94 /* DashboardView.swift */; };
+		8990886D1CC772CF00FB1A43 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990886C1CC772CF00FB1A43 /* CircleView.swift */; };
+		8990886F1CC77DDD00FB1A43 /* CircleContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990886E1CC77DDD00FB1A43 /* CircleContainerView.swift */; };
+		899088711CC7973400FB1A43 /* CircleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899088701CC7973400FB1A43 /* CircleDetailView.swift */; };
+		899088751CC7B57900FB1A43 /* GroupMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899088741CC7B57900FB1A43 /* GroupMember.swift */; };
+		899088771CC7BFC400FB1A43 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899088761CC7BFC400FB1A43 /* MapKit.framework */; };
 		8990CCED1CC135480042AE84 /* Avenir.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 8990CCEC1CC135480042AE84 /* Avenir.ttc */; };
 		8990CCEF1CC153420042AE84 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990CCEE1CC153420042AE84 /* SetupViewController.swift */; };
 		8990CCF11CC1535F0042AE84 /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990CCF01CC1535F0042AE84 /* SetupView.swift */; };
@@ -86,6 +91,11 @@
 		898306811CBCFB8300D92F94 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Controllers/ViewControllers/BaseViewController.swift; sourceTree = "<group>"; };
 		898306831CBCFBB700D92F94 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = Views/BaseView.swift; sourceTree = "<group>"; };
 		898306851CBCFBFB00D92F94 /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardView.swift; path = Views/DashboardView.swift; sourceTree = "<group>"; };
+		8990886C1CC772CF00FB1A43 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleView.swift; path = Models/CircleView.swift; sourceTree = "<group>"; };
+		8990886E1CC77DDD00FB1A43 /* CircleContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleContainerView.swift; path = Views/CircleContainerView.swift; sourceTree = "<group>"; };
+		899088701CC7973400FB1A43 /* CircleDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleDetailView.swift; path = Views/CircleDetailView.swift; sourceTree = "<group>"; };
+		899088741CC7B57900FB1A43 /* GroupMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupMember.swift; path = Models/GroupMember.swift; sourceTree = "<group>"; };
+		899088761CC7BFC400FB1A43 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8990CCEC1CC135480042AE84 /* Avenir.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Avenir.ttc; sourceTree = "<group>"; };
 		8990CCEE1CC153420042AE84 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetupViewController.swift; path = Controllers/ViewControllers/SetupViewController.swift; sourceTree = "<group>"; };
 		8990CCF01CC1535F0042AE84 /* SetupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetupView.swift; path = Views/SetupView.swift; sourceTree = "<group>"; };
@@ -109,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				899088771CC7BFC400FB1A43 /* MapKit.framework in Frameworks */,
 				89702D091CBBC82900A8256F /* MultipeerConnectivity.framework in Frameworks */,
 				767DFABC483D1669BA01359E /* Pods_scooby.framework in Frameworks */,
 			);
@@ -182,6 +193,8 @@
 				89EE70E21CBE5EE0009348A2 /* Group.swift */,
 				89E32DF11CBE724E007C947F /* OutlineButton.swift */,
 				8990CCF21CC15BC50042AE84 /* RoundedButton.swift */,
+				8990886C1CC772CF00FB1A43 /* CircleView.swift */,
+				899088741CC7B57900FB1A43 /* GroupMember.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -195,6 +208,8 @@
 				8990CCF01CC1535F0042AE84 /* SetupView.swift */,
 				892DECB11CC4F82400EB2B51 /* JoinGroupView.swift */,
 				892DECB51CC5190400EB2B51 /* RadarView.swift */,
+				8990886E1CC77DDD00FB1A43 /* CircleContainerView.swift */,
+				899088701CC7973400FB1A43 /* CircleDetailView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -270,6 +285,7 @@
 		F28A1B2FACDC7ACA41227697 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				899088761CC7BFC400FB1A43 /* MapKit.framework */,
 				CD4798F85706357B031F620E /* Pods_scooby.framework */,
 			);
 			name = Frameworks;
@@ -416,15 +432,18 @@
 				897E6F6A1CBBB9E8008741B8 /* Fonts.swift in Sources */,
 				897E6F631CBBB902008741B8 /* ErrorController.swift in Sources */,
 				8990CCEF1CC153420042AE84 /* SetupViewController.swift in Sources */,
+				8990886F1CC77DDD00FB1A43 /* CircleContainerView.swift in Sources */,
 				898306821CBCFB8300D92F94 /* BaseViewController.swift in Sources */,
 				8990CCF91CC179FE0042AE84 /* KeyboardHider.swift in Sources */,
 				898306841CBCFBB700D92F94 /* BaseView.swift in Sources */,
 				892DECB41CC518ED00EB2B51 /* RadarViewController.swift in Sources */,
 				897E6F651CBBB92C008741B8 /* NavigationController.swift in Sources */,
 				897E6F6C1CBBBA3C008741B8 /* Device.swift in Sources */,
+				899088711CC7973400FB1A43 /* CircleDetailView.swift in Sources */,
 				897E6F481CBBB2B9008741B8 /* DashboardViewController.swift in Sources */,
 				89EE70E31CBE5EE0009348A2 /* Group.swift in Sources */,
 				89E32DFA1CBFD5AD007C947F /* Datacalls.swift in Sources */,
+				8990886D1CC772CF00FB1A43 /* CircleView.swift in Sources */,
 				8990CCF71CC16FE70042AE84 /* Keyboard.swift in Sources */,
 				89702D071CBBC7A700A8256F /* MultipeerController.swift in Sources */,
 				897E6F681CBBB95E008741B8 /* Colors.swift in Sources */,
@@ -442,6 +461,7 @@
 				8990CCF11CC1535F0042AE84 /* SetupView.swift in Sources */,
 				8990CCF51CC16D260042AE84 /* BottomBorder.swift in Sources */,
 				897E6F461CBBB2B9008741B8 /* AppDelegate.swift in Sources */,
+				899088751CC7B57900FB1A43 /* GroupMember.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

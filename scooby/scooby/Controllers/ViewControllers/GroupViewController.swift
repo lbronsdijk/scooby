@@ -38,6 +38,8 @@ class GroupViewController: BaseViewController, MultipeerDelegate, GroupDelegate 
             ), forState: .Normal)
         closeButton.addTarget(self, action: #selector(close), forControlEvents: .TouchUpInside)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: closeButton)
+        // targets
+        groupView.partyButton.addTarget(self, action: #selector(party), forControlEvents: .TouchUpInside)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -47,18 +49,23 @@ class GroupViewController: BaseViewController, MultipeerDelegate, GroupDelegate 
         GroupViewController.group?.delegate = self
     }
     
-    func peerDidJoin(peerID: MCPeerID) {
+    func memberDidJoin(member: GroupMember) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             
-            GroupViewController.lastChangedName = peerID.displayName
+            GroupViewController.lastChangedName = member.peerId.displayName
             
             dispatch_async(dispatch_get_main_queue(), {
-                self.groupView.changeLastJoinedName(peerID.displayName)
+                self.groupView.changeLastJoinedName(member.peerId.displayName)
             })
         }
     }
 
     func close() {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func party() {
+        let navigationController = NavigationController(rootViewController: RadarViewController())
+        self.presentViewController(navigationController, animated: true, completion: nil)
     }
 }

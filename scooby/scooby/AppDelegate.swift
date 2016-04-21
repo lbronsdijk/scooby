@@ -36,7 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // create rootviewcontroller with navigation
         var rootViewController: UIViewController!
         
-        //rootViewController = RadarViewController()
+//        MultipeerController.displayName = name
+//        rootViewController = RadarViewController()
         
         if name == nil {
             rootViewController = SetupViewController()

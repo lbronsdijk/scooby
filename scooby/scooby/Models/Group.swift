@@ -10,34 +10,33 @@ import Foundation
 import MultipeerConnectivity
 import QRCode
 
-@objc protocol GroupDelegate {
-    optional func peerDidJoin(peerID: MCPeerID)
+protocol GroupDelegate {
+    func memberDidJoin(member: GroupMember)
 }
 
 class Group {
     
-    var creator : MCPeerID!
-    var peers : [MCPeerID]!
+    var creator : GroupMember!
+    var members : [GroupMember]!
     var groupId : String!
     var qrCode : UIImage!
     var delegate: GroupDelegate?
     
     init(creator : MCPeerID) {
-        self.creator = creator
-        self.peers = [MCPeerID]()
-        self.peers.append(creator)
+        self.creator = GroupMember(peerId: creator)
+        self.members = [GroupMember]()
+        self.members.append(self.creator)
         self.groupId = Group.generateGroupId()
-        self.qrCode = Group.generateQRForGroupId(self.groupId, creatorName: self.creator.displayName)
+        self.qrCode = Group.generateQRForGroupId(self.groupId, creatorName: self.creator.peerId.displayName)
         print("\(creator.displayName) created a group with id: \(groupId)")
     }
     
     func join(peer : MCPeerID) {
-        if !self.peers.contains(peer) {
-            self.peers.append(peer)
-            print("\(peer.displayName) joined your group")
-            if delegate != nil {
-                delegate!.peerDidJoin?(peer)
-            }
+        let member = GroupMember(peerId: peer)
+        self.members.append(member)
+        print("\(peer.displayName) joined your group")
+        if delegate != nil {
+            delegate!.memberDidJoin(member)
         }
     }
     

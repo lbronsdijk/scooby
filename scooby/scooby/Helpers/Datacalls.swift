@@ -72,9 +72,9 @@ class Datacalls {
             
             var namesOfGroupMembers = [String]()
             
-            for peer: MCPeerID in (GroupViewController.group?.peers)! {
-                if peer != MultipeerController.sharedInstance.peerId {
-                    namesOfGroupMembers.append(peer.displayName)
+            for member: GroupMember in (GroupViewController.group?.members)! {
+                if member.peerId != MultipeerController.sharedInstance.peerId {
+                    namesOfGroupMembers.append(member.peerId.displayName)
                 }
                 
             }
@@ -88,16 +88,16 @@ class Datacalls {
                 receiver: sender, successHandler: {
                     GroupViewController.group?.join(sender)
                     
-                    for peer: MCPeerID in (GroupViewController.group?.peers)! {
+                    for member: GroupMember in (GroupViewController.group?.members)! {
                         
-                        if peer == MultipeerController.sharedInstance.peerId {
+                        if member.peerId == MultipeerController.sharedInstance.peerId {
                             continue
                         }
                         
                         Datacalls.sendData(
                             "join",
                             data: ["name" : sender.displayName],
-                            receiver: peer,
+                            receiver: member.peerId,
                             successHandler: {
                                 print("Confirm to \(sender.displayName) that i am part of the group")
                             },
@@ -119,15 +119,20 @@ class Datacalls {
         GroupViewController.group?.groupId = groupId
         GroupViewController.group?.join(MultipeerController.sharedInstance.peerId)
         
-        let navigationController: NavigationController = (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController as! NavigationController
-        let viewController: BaseViewController = navigationController.viewControllers.last as! BaseViewController
-        
-        if viewController.presentedViewController != nil {
-            viewController.presentedViewController?.dismissViewControllerAnimated(true, completion: nil)
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+            
+            let navigationController: NavigationController = (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController as! NavigationController
+            var viewController: BaseViewController = navigationController.viewControllers.last as! BaseViewController
+            
+            if viewController.presentedViewController != nil {
+                viewController = (viewController.presentedViewController as! NavigationController).viewControllers.last as! BaseViewController
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                let radarNavigationController = NavigationController(rootViewController: RadarViewController())
+                viewController.presentViewController(radarNavigationController, animated: true, completion: nil)
+            })
         }
-        
-        let groupNavigationController = NavigationController(rootViewController: GroupViewController())
-        viewController.presentViewController(groupNavigationController, animated: true, completion: nil)
         
         for member: String in groupMembers {
             

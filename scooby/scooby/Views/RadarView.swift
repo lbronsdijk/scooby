@@ -11,6 +11,9 @@ import QuartzCore
 
 class RadarView: BaseView {
 
+    var nearestScoobyNameLabel: UILabel!
+    var circleContainer: CircleContainerView!
+    
     private var radarSpinner: UIImageView!
     
     required init?(coder aDecoder: NSCoder) {
@@ -29,7 +32,31 @@ class RadarView: BaseView {
         radarSpinner.image = UIImage(named: "RadarSpinner")
         addSubview(radarSpinner)
         
+        let nearestScoobyLabel = UILabel(frame: CGRectMake(20, 26, frame.width - 40, 80))
+        nearestScoobyLabel.font = UIFont(name: FONT_AVENIRLIGHT, size: 16)
+        nearestScoobyLabel.textColor = UIColor(hexString: COLOR_WHITE)
+        nearestScoobyLabel.text = "Nearest Scooby"
+        nearestScoobyLabel.textAlignment = .Left
+        nearestScoobyLabel.numberOfLines = 1
+        nearestScoobyLabel.sizeToFit()
+        addSubview(nearestScoobyLabel)
+        
+        nearestScoobyNameLabel = UILabel(frame: CGRectMake(20, nearestScoobyLabel.frame.origin.y + nearestScoobyLabel.frame.height, frame.width - 40, 80))
+        nearestScoobyNameLabel.font = UIFont(name: FONT_AVENIRHEAVY, size: 20)
+        nearestScoobyNameLabel.textColor = UIColor(hexString: COLOR_WHITE)
+        nearestScoobyNameLabel.textAlignment = .Left
+        addSubview(nearestScoobyNameLabel)
+        
         animateRadar()
+        
+        circleContainer = CircleContainerView(frame: CGRectMake(0, 0, frame.width, frame.height))
+        addSubview(circleContainer)
+    }
+    
+    func changeNearestScoobyName(name: String) {
+        nearestScoobyNameLabel.text = "\(name)"
+        nearestScoobyNameLabel.numberOfLines = 1
+        nearestScoobyNameLabel.sizeToFit()
     }
     
     func animateRadar() {
@@ -43,4 +70,6 @@ class RadarView: BaseView {
         
         self.radarSpinner.layer.addAnimation(rotationAnimation, forKey: nil)
     }
+    
+    
 }

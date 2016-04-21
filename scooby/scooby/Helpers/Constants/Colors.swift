@@ -14,6 +14,7 @@ let COLOR_BLACK         = "#3d2c2a"
 let COLOR_RED           = "#d84c3a"
 let COLOR_GREEN         = "#6c9491"
 let COLOR_LIGHTGRAY     = "#f0f0f0"
+let COLOR_GRAY          = "#aea8a7"
 
 // extending UIColor to accept hex codes
 extension UIColor {
