@@ -78,7 +78,10 @@ class RadarViewController: BaseViewController, GroupDelegate {
     }
     
     func memberDidJoin(member: GroupMember) {
-        radarView.circleContainer.addCircle(member)
+        
+        if member.circleView == nil {
+            radarView.circleContainer.addCircle(member)
+        }
     }
     
     func showMenu() {
@@ -121,9 +124,9 @@ class RadarViewController: BaseViewController, GroupDelegate {
                 continue
             }
             
-//            if member.circleView == nil {
-//                self.radarView.circleContainer.addCircle(member)
-//            }
+            if member.circleView == nil {
+                self.radarView.circleContainer.addCircle(member)
+            }
             
             let currentDistance = LocationController.distanceBetweenCoordinates(
                 locationController.location!,
