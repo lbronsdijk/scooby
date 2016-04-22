@@ -23,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         // start monitoring internet connection
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(networkStatusChanged(_:)), name: ReachabilityStatusChangedNotification, object: nil)
-        Reach().monitorReachabilityChanges()
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(networkStatusChanged(_:)), name: ReachabilityStatusChangedNotification, object: nil)
+//        Reach().monitorReachabilityChanges()
         
         // create the application its window
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)

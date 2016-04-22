@@ -19,31 +19,38 @@ class Datacalls {
         let dataDict: NSDictionary! = NSKeyedUnarchiver.unarchiveObjectWithData(data)! as? NSDictionary
         print("Received data from: \(sender.displayName) data: \(dataDict)")
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-        
-            switch dataDict?.objectForKey("call") as! String {
-                case "join":
-                    Datacalls.joinCall(sender, data: dataDict)
-                    break
-                case "joinRequest":
-                    Datacalls.joinRequestCall(sender, data: dataDict)
-                    break
-                case "joinRequestAccepted":
-                    Datacalls.joinRequestAcceptedCall(sender, data: dataDict)
-                    break
-                case "areYouInGroup":
-                    Datacalls.areYouInGroupCall(sender, data: dataDict)
-                    break
-                case "updateLocation":
-                    Datacalls.updateLocationCall(sender, data: dataDict)
-                    break
-                default:
-                    break
-            }
+        switch dataDict?.objectForKey("call") as! String {
+        case "join":
+            Datacalls.joinCall(sender, data: dataDict)
+            break
+        case "leave":
+            Datacalls.leaveCall(sender, data: dataDict)
+            break
+        case "joinRequest":
+            Datacalls.joinRequestCall(sender, data: dataDict)
+            break
+        case "joinRequestAccepted":
+            Datacalls.joinRequestAcceptedCall(sender, data: dataDict)
+            break
+        case "areYouInGroup":
+            Datacalls.areYouInGroupCall(sender, data: dataDict)
+            break
+        case "updateLocation":
+            Datacalls.updateLocationCall(sender, data: dataDict)
+            break
+        default:
+            break
         }
     }
     
     // MARK: Requests
+    
+    private static func leaveCall(sender: MCPeerID, data: NSDictionary) {
+        
+        dispatch_async(dispatch_get_main_queue(), {
+            GroupViewController.group?.leave(sender)
+        })
+    }
     
     private static func joinCall(sender: MCPeerID, data: NSDictionary) {
         
@@ -127,17 +134,24 @@ class Datacalls {
         GroupViewController.group?.join(MultipeerController.sharedInstance.peerId)
         
         
-        let navigationController: NavigationController = (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController as! NavigationController
-        var viewController: BaseViewController = navigationController.viewControllers.last as! BaseViewController
-        
-        if viewController.presentedViewController != nil {
-            viewController = (viewController.presentedViewController as! NavigationController).viewControllers.last as! BaseViewController
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+            
+            let navigationController: NavigationController = (UIApplication.sharedApplication().delegate as! AppDelegate).window?.rootViewController as! NavigationController
+            var viewController: BaseViewController = navigationController.viewControllers.last as! BaseViewController
+            
+            
+            while (viewController.presentedViewController != nil) {
+                viewController = (viewController.presentedViewController as! NavigationController).viewControllers.last as! BaseViewController
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                let radarViewController = RadarViewController()
+                let radarNavigationController = NavigationController(rootViewController: radarViewController)
+                viewController.presentViewController(radarNavigationController, animated: true, completion: { 
+                    radarViewController.radarView.circleContainer.addCircle((GroupViewController.group?.creator)!)
+                })
+            })
         }
-        
-        dispatch_async(dispatch_get_main_queue(), {
-            let radarNavigationController = NavigationController(rootViewController: RadarViewController())
-            viewController.presentViewController(radarNavigationController, animated: true, completion: nil)
-        })
         
         for member: String in groupMembers {
             

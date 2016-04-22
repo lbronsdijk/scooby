@@ -112,60 +112,64 @@ class RadarViewController: BaseViewController, GroupDelegate {
             return
         }
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-
-            var distance: Double?
-            var nearestName: String?
+        var distance: Double?
+        var nearestName: String?
+        
+        for member: GroupMember in (GroupViewController.group?.members)! {
             
-            for member: GroupMember in (GroupViewController.group?.members)! {
-                
-                if (member.location == nil || member.peerId == MultipeerController.sharedInstance.peerId) {
-                    continue
-                }
-                
-                let currentDistance = LocationController.distanceBetweenCoordinates(
-                    locationController.location!,
-                    toCoordinates: member.location!
-                )
-                
-                if (distance == nil || (currentDistance < distance!)) {
-                    distance = currentDistance
-                    nearestName = member.peerId.displayName
-                }
-                
-                let degrees = LocationController.getBearingBetweenTwoPoints(
-                    locationController.location!,
-                    point2: member.location!
-                )
-                
-                var radarDegrees: Double = locationController.heading! + degrees
-                
-                while (radarDegrees > 360) {
-                    radarDegrees -= 360
-                }
-                
-                while (radarDegrees < 0) {
-                    radarDegrees += 360
-                }
-                
-                dispatch_async(dispatch_get_main_queue(), {
-                    
-                    self.radarView.circleContainer.moveCircleToDegree(
-                        self.radarView.circleContainer.peerCircles.last!,
-                        degrees: (radarDegrees)
-                    )
-                })
+            if (member.location == nil || member.peerId == MultipeerController.sharedInstance.peerId) {
+                continue
             }
             
-            if nearestName != nil {
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.radarView.changeNearestScoobyName(nearestName!)
-                })
+//            if member.circleView == nil {
+//                self.radarView.circleContainer.addCircle(member)
+//            }
+            
+            let currentDistance = LocationController.distanceBetweenCoordinates(
+                locationController.location!,
+                toCoordinates: member.location!
+            )
+            
+            member.distance = currentDistance
+            
+            if (distance == nil || (currentDistance < distance!)) {
+                distance = currentDistance
+                nearestName = member.peerId.displayName
             }
+            
+            let degrees = LocationController.getBearingBetweenTwoPoints(
+                locationController.location!,
+                point2: member.location!
+            )
+            
+            var radarDegrees: Double = locationController.heading! + degrees
+            
+            while (radarDegrees > 360) {
+                radarDegrees -= 360
+            }
+            
+            while (radarDegrees < 0) {
+                radarDegrees += 360
+            }
+            
+            member.degrees = radarDegrees
+            
+            if radarView.circleContainer.detailView.member != nil && radarView.circleContainer.detailView.member!.circleView == member.circleView {
+                radarView.circleContainer.assignMemberToDetail(member.circleView!)
+            }
+            
+            self.radarView.circleContainer.moveCircleToDegree(
+                self.radarView.circleContainer.peerCircles.last!,
+                degrees: (radarDegrees)
+            )
+        }
+        
+        if nearestName != nil {
+            self.radarView.changeNearestScoobyName(nearestName!)
         }
         
         if !self.stopRadar {
-            self.performSelector(#selector(self.updateRadar), withObject: nil, afterDelay: 0.1)
+            self.performSelector(#selector(self.updateRadar), withObject: nil, afterDelay: 0.034)
         }
     }
 }

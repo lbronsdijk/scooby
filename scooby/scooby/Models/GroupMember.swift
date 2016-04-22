@@ -15,6 +15,8 @@ class GroupMember {
     var peerId: MCPeerID!
     var circleView: CircleView?
     var location: CLLocationCoordinate2D?
+    var degrees: Double?
+    var distance: Double?
     
     init(peerId: MCPeerID) {
         self.peerId = peerId

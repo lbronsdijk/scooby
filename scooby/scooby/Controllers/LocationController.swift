@@ -59,7 +59,11 @@ class LocationController: NSObject, CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
         location = newLocation.coordinate
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+        //dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+        
+        if GroupViewController.group == nil {
+            return
+        }
         
             for member: GroupMember in (GroupViewController.group?.members)! {
             
@@ -71,7 +75,6 @@ class LocationController: NSObject, CLLocationManagerDelegate {
                             "lon" : "\(newLocation.coordinate.longitude)"
                         ],
                         receiver: member.peerId,
-                        reliable: false,
                         successHandler: {},
                         errorHandler: { (error) in }
                     )
@@ -79,7 +82,7 @@ class LocationController: NSObject, CLLocationManagerDelegate {
                     member.location = newLocation.coordinate
                 }
             }
-        }
+        //}
     }
     
     // update heading

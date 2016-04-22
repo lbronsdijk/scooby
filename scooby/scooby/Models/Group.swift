@@ -40,6 +40,28 @@ class Group {
         }
     }
     
+    func leave(peer: MCPeerID) {
+        
+        var indexOfMemberToRemove: Int?
+        var index: Int = 0
+        
+        for member: GroupMember in members! {
+            if member.peerId == peer {
+                indexOfMemberToRemove = index
+                UIView.animateWithDuration(0.3, animations: { 
+                    member.circleView?.alpha = 0
+                }, completion: { (Bool) in
+                    member.circleView?.removeFromSuperview()
+                })
+            }
+            index += 1
+        }
+        
+        if indexOfMemberToRemove != nil {
+            members.removeAtIndex(indexOfMemberToRemove!)
+        }
+    }
+    
     static func generateGroupId() -> String {
         return String.random(11)
     }

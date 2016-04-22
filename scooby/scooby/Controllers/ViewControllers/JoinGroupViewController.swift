@@ -18,6 +18,9 @@ class JoinGroupViewController: BaseViewController, MultipeerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        LocationController.sharedInstance.startLocating()
+        
         // initialize view
         joinView = JoinGroupView(frame: viewRect)
         view.addSubview(joinView)

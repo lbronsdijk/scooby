@@ -14,11 +14,11 @@ import CoreLocation
 class CircleContainerView: UIView, CircleProtocol {
 
     var peerCircles = [CircleView]()
-    private var meCircle: CircleView!
+    private var meCircle: CircleView?
     private var minY, maxY: CGFloat!
     private var dashedBorder: CAShapeLayer!
     private var infoArea: UIImageView!
-    private var detailView: CircleDetailView!
+    var detailView: CircleDetailView!
     private var trigger: Bool = false
     
     required init?(coder aDecoder: NSCoder) {
@@ -68,9 +68,9 @@ class CircleContainerView: UIView, CircleProtocol {
                     center.x,
                     center.y), big: true)
                 let peerDisplayName = MultipeerController.displayName!
-                meCircle.changeTextLabel("\(peerDisplayName.substringToIndex(peerDisplayName.startIndex.advancedBy(2)).uppercaseString)")
-                meCircle.draggable = false
-                addSubview(meCircle)
+                meCircle!.changeTextLabel("\(peerDisplayName.substringToIndex(peerDisplayName.startIndex.advancedBy(2)).uppercaseString)")
+                meCircle!.draggable = false
+                addSubview(meCircle!)
             } else {
                 // groupmember circle
                 addCircle(member)
@@ -96,7 +96,12 @@ class CircleContainerView: UIView, CircleProtocol {
         let peerDisplayName = member.peerId.displayName
         circle.changeTextLabel("\(peerDisplayName.substringToIndex(peerDisplayName.startIndex.advancedBy(2)).uppercaseString)")
         circle.delegate = self
-        insertSubview(circle, belowSubview: meCircle)
+        
+        if meCircle == nil {
+            addSubview(circle)
+        } else {
+            insertSubview(circle, belowSubview: meCircle!)
+        }
         
         peerCircles.append(circle)
         member.circleView = circle
@@ -122,6 +127,8 @@ class CircleContainerView: UIView, CircleProtocol {
     func circleReleased(circle: CircleView) {
         if trigger {
             
+            assignMemberToDetail(circle)
+            
             detailView.open()
             
             UIView.animateWithDuration(0.3, animations: {
@@ -131,7 +138,31 @@ class CircleContainerView: UIView, CircleProtocol {
     }
     
     func circleIsTapped(circle: CircleView) {
+        
+        assignMemberToDetail(circle)
+        
         detailView.open()
+    }
+    
+    func assignMemberToDetail(circle: CircleView) {
+        
+        for member:GroupMember in (GroupViewController.group?.members)! {
+            if member.circleView == circle {
+                
+                detailView.changeName(member.peerId.displayName)
+                
+                if member.degrees != nil {
+                    detailView.arrow.transform = CGAffineTransformMakeRotation((CGFloat(member.degrees!) * CGFloat(M_PI)) / 180.0)
+                }
+                if member.distance != nil {
+                    detailView.changeDistance(Int(member.distance!))
+                }
+                
+                detailView.member = member
+                
+                break
+            }
+        }
     }
     
     func moveCircleToDegree(circle: CircleView, degrees: Double) {

@@ -39,6 +39,19 @@ class PanicViewController: BaseViewController {
     
     func toTheMoonAndNeverReturn() {
         
+        for member: GroupMember in (GroupViewController.group?.members)! {
+            
+            if (member.peerId != MultipeerController.sharedInstance.peerId) {
+                Datacalls.sendData(
+                    "leave",
+                    data: NSDictionary(),
+                    receiver: member.peerId,
+                    successHandler: {},
+                    errorHandler: { (error) in }
+                )
+            }
+        }
+        
         self.navigationItem.rightBarButtonItem = nil
         
         UIView.animateWithDuration(1.0) { 
