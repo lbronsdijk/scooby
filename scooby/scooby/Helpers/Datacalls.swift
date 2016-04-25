@@ -147,8 +147,11 @@ class Datacalls {
             dispatch_async(dispatch_get_main_queue(), {
                 let radarViewController = RadarViewController()
                 let radarNavigationController = NavigationController(rootViewController: radarViewController)
-                viewController.presentViewController(radarNavigationController, animated: true, completion: { 
-                    radarViewController.radarView.circleContainer.addCircle((GroupViewController.group?.creator)!)
+                viewController.presentViewController(radarNavigationController, animated: true, completion: {
+                    
+                    if GroupViewController.group?.creator.circleView == nil {
+                        radarViewController.radarView.circleContainer.addCircle((GroupViewController.group?.creator)!)
+                    }
                 })
             })
         }

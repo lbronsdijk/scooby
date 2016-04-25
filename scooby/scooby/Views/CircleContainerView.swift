@@ -73,7 +73,7 @@ class CircleContainerView: UIView, CircleProtocol {
                 addSubview(meCircle!)
             } else {
                 // groupmember circle
-                addCircle(member)
+                if member.circleView == nil { addCircle(member) }
             }
         }
         
@@ -152,7 +152,9 @@ class CircleContainerView: UIView, CircleProtocol {
                 detailView.changeName(member.peerId.displayName)
                 
                 if member.degrees != nil {
-                    detailView.arrow.transform = CGAffineTransformMakeRotation((CGFloat(member.degrees!) * CGFloat(M_PI)) / 180.0)
+                    
+                    let radians = CGFloat(LocationController.degreesToRadians((-member.degrees!) + 90))
+                    detailView.arrow.transform = CGAffineTransformMakeRotation(radians)
                 }
                 if member.distance != nil {
                     detailView.changeDistance(Int(member.distance!))
