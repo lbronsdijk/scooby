@@ -17,4 +17,4 @@ In short terms: you don't need a
 #### So, why Scooby?
 You don't have to worry anymore about when and where to grab a beer at festivals, without losing your party crew.
 
-
+Became curious? Checkout the [Scooby showcase here](https://www.youtube.com/watch?v=QfmOiXj6fp4) (Sorry, Dutch only).
