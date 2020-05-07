@@ -6,7 +6,7 @@
 Use Scooby to find your friends back at a crowed place, such as festivals, when 3G or 4G is letting you down.
 
 Scooby uses Multipeer Connectivity to setup a peer-to-peer network over WiFi and Bluetooth, to connected with other iOS devices. 
-In short terms: you don't need a 
+In short terms: you don't need a working data connection to get in touch with your friends on a festival.
 
 #### Requirements
 * iOS7 or higher.
